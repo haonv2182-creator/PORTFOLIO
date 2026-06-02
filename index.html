@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Cá Nhân</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">MyPortfolio</a>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-button">☰</label>
+
+            <ul class="nav-menu">
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#skills">Kỹ năng</a></li>
+                <li><a href="#projects">Dự án</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+                <li><a href="login.html" class="login-link">Đăng nhập</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="hello-text">Xin chào, tôi là</p>
+                <h1>Họ Tên Của Bạn</h1>
+                <h2>Sinh viên Lập trình Web</h2>
+                <p class="hero-desc">
+                    Tôi đang học HTML5, CSS3 và thiết kế giao diện website.
+                    Portfolio này dùng để giới thiệu bản thân, kỹ năng và các dự án học tập của tôi.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Xem dự án</a>
+                    <a href="#contact" class="btn btn-outline">Liên hệ</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="avatar.jpg" alt="Ảnh cá nhân">
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="section-title">
+                <h2>Giới thiệu bản thân</h2>
+            </div>
+
+            <div class="about-grid">
+                <article class="about-card">
+                    <h3>Mục tiêu học tập</h3>
+                    <p>
+                        Rèn luyện kỹ năng xây dựng giao diện website bằng HTML5, CSS3,
+                        Flexbox, CSS Grid và Responsive Design.
+                    </p>
+                </article>
+
+                <article class="about-card">
+                    <h3>Định hướng</h3>
+                    <p>
+                        Phát triển theo hướng thiết kế giao diện web và trở thành
+                        lập trình viên Front-end trong tương lai.
+                    </p>
+                </article>
+
+                <article class="about-card">
+                    <h3>Điểm mạnh</h3>
+                    <p>
+                        Chăm chỉ, chịu khó học hỏi, có khả năng sắp xếp nội dung
+                        giao diện rõ ràng, dễ nhìn và thân thiện với người dùng.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="section skill-section">
+            <div class="section-title">
+                <h2>Kỹ năng</h2>
+            </div>
+
+            <div class="skill-list">
+                <div class="skill-item">HTML5</div>
+                <div class="skill-item">CSS3</div>
+                <div class="skill-item">Flexbox</div>
+                <div class="skill-item">CSS Grid</div>
+                <div class="skill-item">Responsive Design</div>
+                <div class="skill-item">UI Design cơ bản</div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-title">
+                <h2>Dự án cá nhân</h2>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-number">01</div>
+                    <div class="project-content">
+                        <h3>Website Portfolio cá nhân</h3>
+                        <p>
+                            Website giới thiệu bản thân, kỹ năng, dự án và thông tin liên hệ.
+                        </p>
+                        <span>HTML5, CSS3, Responsive</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">02</div>
+                    <div class="project-content">
+                        <h3>Website tra cứu điểm chuẩn</h3>
+                        <p>
+                            Website hỗ trợ tra cứu điểm chuẩn theo trường, ngành học,
+                            năm tuyển sinh và phương thức xét tuyển.
+                        </p>
+                        <span>HTML, CSS, PHP, MySQL</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">03</div>
+                    <div class="project-content">
+                        <h3>Website giới thiệu sản phẩm</h3>
+                        <p>
+                            Giao diện giới thiệu sản phẩm với menu điều hướng,
+                            banner và danh sách sản phẩm.
+                        </p>
+                        <span>HTML5, CSS3, Flexbox, Grid</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="section-title">
+                <h2>Liên hệ</h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Email</h3>
+                    <p>email@example.com</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Số điện thoại</h3>
+                    <p>0123 456 789</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Địa chỉ</h3>
+                    <p>Việt Nam</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Họ Tên Của Bạn. Portfolio cá nhân bằng HTML5 và CSS3.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="sidebar-logo">PF</div>
+            <h2>Portfolio Admin</h2>
+
+            <ul class="sidebar-menu">
+                <li><a href="#">Tổng quan</a></li>
+                <li><a href="#">Thông tin cá nhân</a></li>
+                <li><a href="#">Kỹ năng</a></li>
+                <li><a href="#">Dự án</a></li>
+                <li><a href="index.html">Xem trang chính</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-header">
+                <div>
+                    <p>Xin chào</p>
+                    <h1>Trang quản trị Portfolio</h1>
+                </div>
+
+                <a href="login.html" class="btn btn-outline">Đăng xuất</a>
+            </header>
+
+            <section class="stat-grid">
+                <div class="stat-card">
+                    <h3>03</h3>
+                    <p>Dự án</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>06</h3>
+                    <p>Kỹ năng</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>120</h3>
+                    <p>Lượt xem</p>
+                </div>
+            </section>
+
+            <section class="admin-section">
+                <div class="toolbar">
+                    <div>
+                        <p>Quản lý nội dung</p>
+                        <h2>Danh sách dự án</h2>
+                    </div>
+
+                    <button class="btn btn-primary">Thêm dự án</button>
+                </div>
+
+                <div class="table-box">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên dự án</th>
+                                <th>Công nghệ</th>
+                                <th>Trạng thái</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Website Portfolio cá nhân</td>
+                                <td>HTML5, CSS3</td>
+                                <td>Hoàn thành</td>
+                                <td>
+                                    <button class="btn-small">Sửa</button>
+                                    <button class="btn-small danger">Xóa</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Website tra cứu điểm chuẩn</td>
+                                <td>HTML, CSS, PHP, MySQL</td>
+                                <td>Đang phát triển</td>
+                                <td>
+                                    <button class="btn-small">Sửa</button>
+                                    <button class="btn-small danger">Xóa</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Website giới thiệu sản phẩm</td>
+                                <td>HTML5, CSS3, Grid</td>
+                                <td>Hoàn thành</td>
+                                <td>
+                                    <button class="btn-small">Sửa</button>
+                                    <button class="btn-small danger">Xóa</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="admin-section">
+                <div class="toolbar">
+                    <div>
+                        <p>Cập nhật</p>
+                        <h2>Thông tin cá nhân</h2>
+                    </div>
+                </div>
+
+                <form class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Họ và tên</label>
+                            <input type="text" value="Họ Tên Của Bạn">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" value="email@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mô tả bản thân</label>
+                        <textarea rows="5">Tôi là sinh viên đang học lập trình web, yêu thích thiết kế giao diện bằng HTML và CSS.</textarea>
+                    </div>
+
+                    <button type="button" class="btn btn-primary">Lưu thông tin</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
