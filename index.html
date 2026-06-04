@@ -60,33 +60,38 @@
             </div>
         </section>
 
-        <div class="portfolio-layout">
+        <div class="tab-layout">
 
-            <aside class="side-menu">
-                <a href="#about" class="active">
+            <input type="radio" name="portfolio-tab" id="tab-about" checked>
+            <input type="radio" name="portfolio-tab" id="tab-skills">
+            <input type="radio" name="portfolio-tab" id="tab-projects">
+            <input type="radio" name="portfolio-tab" id="tab-contact">
+
+            <aside class="tab-menu">
+                <label for="tab-about">
                     <span>👤</span>
                     Giới thiệu
-                </a>
+                </label>
 
-                <a href="#skills">
+                <label for="tab-skills">
                     <span>📄</span>
                     Kỹ năng
-                </a>
+                </label>
 
-                <a href="#projects">
+                <label for="tab-projects">
                     <span>📦</span>
                     Dự án
-                </a>
+                </label>
 
-                <a href="#contact">
+                <label for="tab-contact">
                     <span>✉</span>
                     Liên hệ
-                </a>
+                </label>
             </aside>
 
-            <section class="content-card">
+            <section class="tab-content">
 
-                <section id="about" class="content-section">
+                <div class="tab-panel about-panel">
                     <h2>Giới thiệu</h2>
                     <div class="title-line"></div>
 
@@ -97,14 +102,53 @@
                     </p>
 
                     <p>
-                        Trong quá trình học tập, tôi đang rèn luyện kỹ năng HTML5, CSS3,
-                        Flexbox, CSS Grid và thiết kế giao diện responsive. Mục tiêu của tôi
-                        là phát triển bản thân theo hướng xây dựng các sản phẩm web hữu ích,
-                        dễ sử dụng và có tính thẩm mỹ.
+                        Portfolio này được xây dựng bằng HTML5 và CSS3 thuần, dùng để giới thiệu
+                        bản thân, kỹ năng học tập, định hướng nghề nghiệp và các dự án cá nhân.
+                        Trong quá trình học tập, tôi đang rèn luyện kỹ năng xây dựng giao diện
+                        responsive, tổ chức bố cục bằng Flexbox, CSS Grid và trình bày thông tin
+                        một cách rõ ràng, dễ sử dụng.
                     </p>
-                </section>
 
-                <section id="skills" class="content-section">
+                    <div class="service-grid">
+                        <div class="service-card">
+                            <div class="service-icon">🎓</div>
+                            <h3>Ngành học</h3>
+                            <p>
+                                Hệ thống thông tin quản lý, kết hợp giữa công nghệ thông tin,
+                                quản lý dữ liệu và ứng dụng hệ thống trong thực tế.
+                            </p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🎯</div>
+                            <h3>Mục tiêu</h3>
+                            <p>
+                                Rèn luyện kỹ năng thiết kế giao diện, xây dựng website và
+                                phát triển các hệ thống hỗ trợ quản lý thông tin.
+                            </p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">💡</div>
+                            <h3>Điểm mạnh</h3>
+                            <p>
+                                Chăm chỉ, có tinh thần học hỏi, biết sắp xếp nội dung giao diện
+                                rõ ràng, dễ nhìn và thân thiện với người dùng.
+                            </p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🚀</div>
+                            <h3>Định hướng</h3>
+                            <p>
+                                Phát triển theo hướng thiết kế giao diện web, xây dựng website
+                                responsive và quản lý dữ liệu hiệu quả.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-panel skills-panel">
                     <h2>Kỹ năng</h2>
                     <div class="title-line"></div>
 
@@ -112,30 +156,60 @@
                         <div class="service-card">
                             <div class="service-icon">💻</div>
                             <h3>HTML5</h3>
-                            <p>Xây dựng cấu trúc website rõ ràng, đúng ngữ nghĩa.</p>
+                            <p>
+                                Xây dựng cấu trúc website rõ ràng, đúng ngữ nghĩa,
+                                dễ đọc và dễ bảo trì.
+                            </p>
                         </div>
 
                         <div class="service-card">
                             <div class="service-icon">🎨</div>
                             <h3>CSS3</h3>
-                            <p>Thiết kế giao diện đẹp, màu sắc hài hòa và dễ nhìn.</p>
+                            <p>
+                                Thiết kế giao diện đẹp, màu sắc hài hòa, bố cục cân đối
+                                và phù hợp với nội dung.
+                            </p>
                         </div>
 
                         <div class="service-card">
                             <div class="service-icon">📐</div>
                             <h3>Flexbox</h3>
-                            <p>Sắp xếp menu, nút bấm và các thành phần theo hàng/cột.</p>
+                            <p>
+                                Sắp xếp menu, nút bấm, toolbar và các nhóm nội dung
+                                theo hàng hoặc cột.
+                            </p>
                         </div>
 
                         <div class="service-card">
                             <div class="service-icon">▦</div>
                             <h3>CSS Grid</h3>
-                            <p>Chia bố cục lớn và hiển thị danh sách dự án dạng lưới.</p>
+                            <p>
+                                Chia bố cục lớn cho trang Portfolio, danh sách dự án
+                                và trang quản trị Admin Dashboard.
+                            </p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">📱</div>
+                            <h3>Responsive</h3>
+                            <p>
+                                Thiết kế website hiển thị tốt trên desktop, tablet và mobile
+                                bằng media query.
+                            </p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🗂</div>
+                            <h3>Quản lý thông tin</h3>
+                            <p>
+                                Biết tổ chức thông tin cá nhân, kỹ năng, dự án và dữ liệu
+                                theo bố cục rõ ràng.
+                            </p>
                         </div>
                     </div>
-                </section>
+                </div>
 
-                <section id="projects" class="content-section">
+                <div class="tab-panel projects-panel">
                     <h2>Dự án cá nhân</h2>
                     <div class="title-line"></div>
 
@@ -143,47 +217,96 @@
                         <article class="project-new-card">
                             <span>01</span>
                             <h3>Website Portfolio cá nhân</h3>
-                            <p>Website giới thiệu bản thân, kỹ năng, dự án và thông tin liên hệ.</p>
+                            <p>
+                                Website giới thiệu bản thân, kỹ năng, dự án và thông tin liên hệ.
+                                Giao diện được xây dựng bằng HTML5 và CSS3 thuần.
+                            </p>
+                            <p>
+                                <b>Vai trò:</b> Thiết kế giao diện, xây dựng bố cục,
+                                chia section và tối ưu hiển thị responsive.
+                            </p>
                             <small>HTML5, CSS3, Responsive</small>
                         </article>
 
                         <article class="project-new-card">
                             <span>02</span>
                             <h3>Website tra cứu điểm chuẩn</h3>
-                            <p>Website hỗ trợ tra cứu điểm chuẩn theo trường, ngành và phương thức xét tuyển.</p>
+                            <p>
+                                Website hỗ trợ tra cứu điểm chuẩn theo trường, ngành học,
+                                năm tuyển sinh và phương thức xét tuyển.
+                            </p>
+                            <p>
+                                <b>Vai trò:</b> Xây dựng giao diện, bộ lọc tìm kiếm
+                                và trình bày dữ liệu dễ đọc.
+                            </p>
                             <small>HTML, CSS, PHP, MySQL</small>
                         </article>
 
                         <article class="project-new-card">
                             <span>03</span>
                             <h3>Website giới thiệu sản phẩm</h3>
-                            <p>Giao diện giới thiệu sản phẩm với menu, banner và danh sách sản phẩm.</p>
+                            <p>
+                                Giao diện giới thiệu sản phẩm với menu điều hướng, banner,
+                                danh sách sản phẩm và khu vực tin tức.
+                            </p>
+                            <p>
+                                <b>Vai trò:</b> Xây dựng bố cục bằng Flexbox, CSS Grid
+                                và tối ưu giao diện trên nhiều thiết bị.
+                            </p>
                             <small>HTML5, CSS3, Flexbox, Grid</small>
                         </article>
-                    </div>
-                </section>
 
-                <section id="contact" class="content-section">
-                    <h2>Liên hệ</h2>
+                        <article class="project-new-card">
+                            <span>04</span>
+                            <h3>Admin Dashboard</h3>
+                            <p>
+                                Trang quản trị mô phỏng chức năng quản lý thông tin cá nhân,
+                                kỹ năng và danh sách dự án trong Portfolio.
+                            </p>
+                            <p>
+                                <b>Vai trò:</b> Thiết kế layout quản trị bằng CSS Grid,
+                                form nhập liệu và bảng quản lý dự án.
+                            </p>
+                            <small>HTML5, CSS3, Admin Layout</small>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="tab-panel contact-panel">
+                    <h2>Sẵn sàng kết nối</h2>
                     <div class="title-line"></div>
+
+                    <p>
+                        Tôi luôn sẵn sàng học hỏi, trao đổi và tham gia các dự án liên quan
+                        đến thiết kế giao diện website, quản lý thông tin và xây dựng hệ thống web.
+                    </p>
 
                     <div class="contact-new-grid">
                         <div>
-                            <h3>Email</h3>
-                            <p>Haon200611@gmail.com</p>
+                            <h3>Học tập</h3>
+                            <p>
+                                Quan tâm đến HTML, CSS, Responsive Design,
+                                giao diện người dùng và cách tổ chức bố cục website.
+                            </p>
                         </div>
 
                         <div>
-                            <h3>Số điện thoại</h3>
-                            <p>0123 456 789</p>
+                            <h3>Dự án</h3>
+                            <p>
+                                Mong muốn tham gia các dự án web phục vụ học tập,
+                                quản lý thông tin và trình bày dữ liệu.
+                            </p>
                         </div>
 
                         <div>
-                            <h3>Địa chỉ</h3>
-                            <p>Đắk Lắk, Việt Nam</p>
+                            <h3>Liên hệ nhanh</h3>
+                            <p>
+                                Email và số điện thoại đã được hiển thị ở phần hồ sơ cá nhân
+                                phía trên trang.
+                            </p>
                         </div>
                     </div>
-                </section>
+                </div>
 
             </section>
         </div>
@@ -194,5 +317,4 @@
     </footer>
 
 </body>
-</html>
 </html>
