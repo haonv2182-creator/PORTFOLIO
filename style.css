@@ -1191,3 +1191,624 @@ tbody tr:hover td { background: var(--surface-2); }
     .tab-menu { display: none; }
     .portfolio-cover { min-height: 120px; }
 }
+/* =============================================
+   TRANG CHINH CUON DOC
+   ============================================= */
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.main-menu > li > a:not(.btn) {
+    display: block;
+    padding: 9px 12px;
+    border-radius: var(--radius-sm);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.main-menu > li > a:not(.btn):hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.portfolio-content {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.content-section {
+    padding: 46px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    scroll-margin-top: 24px;
+}
+
+.section-soft {
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(37, 99, 235, 0.07),
+            transparent 30%
+        ),
+        var(--surface);
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.section-heading h2 {
+    font-family: var(--font-display);
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.section-number {
+    min-width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    background: var(--grad-main);
+    color: white;
+    font-weight: 800;
+}
+
+.skill-bar {
+    height: 100%;
+    border-radius: inherit;
+    background: var(--grad-main);
+}
+
+.skill-80 {
+    width: 80%;
+}
+
+.skill-75 {
+    width: 75%;
+}
+
+.skill-70 {
+    width: 70%;
+}
+
+.skill-50 {
+    width: 50%;
+}
+
+.contact-card a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1023px) {
+    .main-menu {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .content-section {
+        padding: 36px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .portfolio-nav {
+        align-items: flex-start;
+    }
+
+    .main-menu li:not(:last-child) {
+        display: none;
+    }
+
+    .content-section {
+        padding: 24px;
+        border-radius: var(--radius-lg);
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .section-number {
+        min-width: 40px;
+        height: 40px;
+    }
+}
+/* =============================================
+   GỘP PROFILE VÀ GIỚI THIỆU
+   ============================================= */
+
+.hero-profile-section {
+    margin-top: -120px;
+    overflow: hidden;
+
+    border: 1px solid rgba(219, 234, 254, 0.9);
+    border-radius: var(--radius-xl);
+
+    background: var(--surface);
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-profile-top {
+    padding: 36px;
+
+    display: grid;
+    grid-template-columns: 170px minmax(280px, 1fr) minmax(380px, 1.15fr);
+    align-items: center;
+    gap: 36px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(37, 99, 235, 0.08),
+            transparent 34%
+        ),
+        var(--surface);
+}
+
+.profile-introduction h1 {
+    margin: 8px 0;
+
+    font-family: var(--font-display);
+    font-size: 36px;
+    line-height: 1.15;
+}
+
+.profile-role {
+    margin-bottom: 12px;
+
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.profile-description {
+    max-width: 520px;
+    margin-bottom: 16px;
+
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.hero-profile-about {
+    padding: 42px 36px 38px;
+
+    border-top: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(239, 246, 255, 0.45),
+            rgba(255, 255, 255, 0)
+        );
+}
+
+.about-description {
+    margin-bottom: 28px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px;
+}
+
+.about-description p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.hero-profile-about .service-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.hero-profile-about .service-card {
+    min-height: 210px;
+    padding: 24px 20px;
+}
+
+.portfolio-content {
+    margin-top: 30px;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1023px) {
+    .hero-profile-section {
+        margin-top: -95px;
+    }
+
+    .hero-profile-top {
+        grid-template-columns: 160px 1fr;
+    }
+
+    .profile-info {
+        grid-column: 1 / -1;
+    }
+
+    .hero-profile-about .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 767px) {
+    .hero-profile-section {
+        margin-top: -80px;
+        border-radius: var(--radius-lg);
+    }
+
+    .hero-profile-top {
+        padding: 24px;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile-avatar {
+        margin: auto;
+    }
+
+    .profile-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social-list {
+        justify-content: center;
+    }
+
+    .profile-info {
+        grid-column: auto;
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .hero-profile-about {
+        padding: 30px 24px;
+    }
+
+    .about-description {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .hero-profile-about .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =============================================
+   PHAN 01: AVATAR TRAI - GIOI THIEU PHAI
+   ============================================= */
+
+.hero-profile-section {
+    margin-top: -120px;
+    padding: 0;
+    overflow: hidden;
+
+    border: 1px solid rgba(219, 234, 254, 0.9);
+    border-radius: var(--radius-xl);
+
+    background: var(--surface);
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-about-layout {
+    min-height: 520px;
+    padding: 48px;
+
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    align-items: center;
+    gap: 56px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(37, 99, 235, 0.08),
+            transparent 36%
+        ),
+        var(--surface);
+}
+
+.hero-avatar-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.hero-avatar-column .profile-avatar {
+    width: 220px;
+    height: 280px;
+    margin: 0;
+}
+
+.hero-avatar-column .profile-avatar img {
+    object-position: center top;
+}
+
+.hero-about-content {
+    min-width: 0;
+}
+
+.hero-about-content .section-heading {
+    margin-bottom: 22px;
+}
+
+.hero-about-content .section-heading h1 {
+    font-family: var(--font-display);
+    font-size: 42px;
+    line-height: 1.15;
+}
+
+.hero-about-content > h2 {
+    margin-bottom: 8px;
+
+    font-family: var(--font-display);
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+.hero-about-content .profile-role {
+    margin-bottom: 18px;
+
+    color: var(--primary);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.hero-about-content .profile-description {
+    max-width: 880px;
+    margin-bottom: 14px;
+
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.about-summary-grid {
+    margin-top: 28px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.about-summary-grid article {
+    min-height: 86px;
+    padding: 16px 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    background: var(--surface-2);
+}
+
+.about-summary-grid article > span {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+    background: #eff6ff;
+
+    font-size: 22px;
+}
+
+.about-summary-grid h3 {
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+
+.about-summary-grid p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* TABLET */
+
+@media screen and (max-width: 1023px) {
+    .hero-profile-section {
+        margin-top: -95px;
+    }
+
+    .hero-about-layout {
+        grid-template-columns: 210px minmax(0, 1fr);
+        gap: 34px;
+        padding: 36px;
+    }
+
+    .hero-avatar-column .profile-avatar {
+        width: 190px;
+        height: 240px;
+    }
+
+    .hero-about-content .section-heading h1 {
+        font-size: 36px;
+    }
+
+    .hero-about-content > h2 {
+        font-size: 30px;
+    }
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 767px) {
+    .hero-profile-section {
+        margin-top: -80px;
+        border-radius: var(--radius-lg);
+    }
+
+    .hero-about-layout {
+        min-height: auto;
+        padding: 26px;
+
+        grid-template-columns: 1fr;
+        gap: 28px;
+
+        text-align: center;
+    }
+
+    .hero-avatar-column .profile-avatar {
+        width: 160px;
+        height: 200px;
+    }
+
+    .hero-about-content .section-heading {
+        justify-content: center;
+        text-align: left;
+    }
+
+    .hero-about-content .section-heading h1 {
+        font-size: 30px;
+    }
+
+    .hero-about-content > h2 {
+        font-size: 27px;
+    }
+
+    .about-summary-grid {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+}
+<section
+    id="skills"
+    class="content-section section-soft"
+>
+
+    <div class="section-heading">
+
+        <span class="section-number">
+            02
+        </span>
+
+        <div>
+            <h2>Kỹ năng</h2>
+            <div class="title-line"></div>
+        </div>
+
+    </div>
+
+    <p class="intro-text">
+        Những kỹ năng tôi đang học tập, thực hành và tiếp tục
+        phát triển trong quá trình học.
+    </p>
+
+    <div class="service-grid">
+
+        <article class="service-card">
+
+            <div class="service-icon">
+                💻
+            </div>
+
+            <h3>HTML5</h3>
+
+            <p>
+                Xây dựng cấu trúc website rõ ràng, đúng ngữ nghĩa,
+                dễ đọc và thuận tiện khi chỉnh sửa.
+            </p>
+
+        </article>
+
+        <article class="service-card">
+
+            <div class="service-icon">
+                🎨
+            </div>
+
+            <h3>CSS3</h3>
+
+            <p>
+                Thiết kế giao diện, phối màu, tạo hiệu ứng
+                và trình bày nội dung cân đối.
+            </p>
+
+        </article>
+
+        <article class="service-card">
+
+            <div class="service-icon">
+                📐
+            </div>
+
+            <h3>Flexbox</h3>
+
+            <p>
+                Sắp xếp thanh điều hướng, nút bấm và các nhóm
+                nội dung theo hàng hoặc cột.
+            </p>
+
+        </article>
+
+        <article class="service-card">
+
+            <div class="service-icon">
+                ▦
+            </div>
+
+            <h3>CSS Grid</h3>
+
+            <p>
+                Chia bố cục lớn, danh sách dự án
+                và giao diện trang quản trị.
+            </p>
+
+        </article>
+
+        <article class="service-card">
+
+            <div class="service-icon">
+                📱
+            </div>
+
+            <h3>Responsive Design</h3>
+
+            <p>
+                Tối ưu giao diện trên máy tính,
+                máy tính bảng và điện thoại.
+            </p>
+
+        </article>
+
+        <article class="service-card">
+
+            <div class="service-icon">
+                🗄️
+            </div>
+
+            <h3>PHP và MySQL</h3>
+
+            <p>
+                Có kiến thức cơ bản về xử lý dữ liệu,
+                kết nối cơ sở dữ liệu và xây dựng website động.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
