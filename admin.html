@@ -3,105 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Portfolio</title>
+    <title>Admin Dashboard — Portfolio</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232563eb'/><text x='16' y='22' font-size='18' text-anchor='middle' fill='white' font-weight='bold'>H</text></svg>">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Notification toast */
+        #toast {
+            position: fixed;
+            bottom: 28px; right: 28px;
+            background: var(--text);
+            color: #fff;
+            padding: 14px 22px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(80px);
+            opacity: 0;
+            transition: .35s ease;
+            z-index: 9999;
+            max-width: 300px;
+        }
+        #toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Sidebar active link */
+        .sidebar-menu a.active {
+            background: rgba(255,255,255,.22);
+            color: #fff;
+            font-weight: 700;
+        }
+
+        /* Confirm delete overlay */
+        #confirm-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(15,23,42,.5);
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+        }
+        #confirm-overlay.show { display: flex; }
+        .confirm-box {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            max-width: 380px;
+            width: 90%;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+        .confirm-box h3 { font-size: 20px; margin-bottom: 10px; }
+        .confirm-box p  { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+        .confirm-btns   { display: flex; gap: 12px; justify-content: center; }
+    </style>
 </head>
 <body>
 
     <div class="admin-layout">
-        <aside class="sidebar">
-            <div class="sidebar-logo">PF</div>
+
+        <!-- =================== SIDEBAR =================== -->
+        <aside class="sidebar" role="navigation" aria-label="Menu quản trị">
+            <div class="sidebar-logo" aria-hidden="true">PF</div>
             <h2>Portfolio Admin</h2>
+            <p class="sidebar-tagline">Nguyễn Văn Hào</p>
 
             <ul class="sidebar-menu">
-                <li><a href="#">Tổng quan</a></li>
-                <li><a href="#">Thông tin cá nhân</a></li>
-                <li><a href="#">Kỹ năng</a></li>
-                <li><a href="#">Dự án</a></li>
-                <li><a href="index.html">Xem trang chính</a></li>
+                <li><a href="#" class="active"><span class="menu-icon">📊</span> Tổng quan</a></li>
+                <li><a href="#section-info"><span class="menu-icon">👤</span> Thông tin cá nhân</a></li>
+                <li><a href="#section-projects"><span class="menu-icon">📦</span> Dự án</a></li>
+                <li><a href="index.html"><span class="menu-icon">🌐</span> Xem trang chính</a></li>
             </ul>
         </aside>
 
-        <main class="admin-main">
+        <!-- =================== MAIN =================== -->
+        <main class="admin-main" role="main">
+
+            <!-- Header -->
             <header class="admin-header">
-                <div>
-                    <p>Xin chào</p>
+                <div class="admin-header-text">
+                    <p>Xin chào, Văn Hào 👋</p>
                     <h1>Trang quản trị Portfolio</h1>
                 </div>
-
-                <a href="login.html" class="btn btn-outline">Đăng xuất</a>
+                <a href="login.html" class="btn btn-outline" id="logout-btn">Đăng xuất</a>
             </header>
 
-            <section class="stat-grid">
+            <!-- Stat cards -->
+            <section class="stat-grid" aria-label="Thống kê tổng quan">
                 <div class="stat-card">
-                    <h3>03</h3>
-                    <p>Dự án</p>
+                    <div class="stat-icon" aria-hidden="true">📦</div>
+                    <div class="stat-num" id="count-projects">04</div>
+                    <div class="stat-label">Dự án</div>
                 </div>
-
                 <div class="stat-card">
-                    <h3>06</h3>
-                    <p>Kỹ năng</p>
+                    <div class="stat-icon" aria-hidden="true">🛠</div>
+                    <div class="stat-num">06</div>
+                    <div class="stat-label">Kỹ năng</div>
                 </div>
-
                 <div class="stat-card">
-                    <h3>120</h3>
-                    <p>Lượt xem</p>
+                    <div class="stat-icon" aria-hidden="true">👁</div>
+                    <div class="stat-num" id="view-count">0</div>
+                    <div class="stat-label">Lượt xem</div>
                 </div>
             </section>
 
-            <section class="admin-section">
+            <!-- Projects table -->
+            <section class="admin-section" id="section-projects">
                 <div class="toolbar">
-                    <div>
+                    <div class="toolbar-text">
                         <p>Quản lý nội dung</p>
                         <h2>Danh sách dự án</h2>
                     </div>
-
-                    <button class="btn btn-primary">Thêm dự án</button>
+                    <button class="btn btn-primary" id="add-btn" type="button">+ Thêm dự án</button>
                 </div>
 
                 <div class="table-box">
-                    <table>
+                    <table aria-label="Bảng danh sách dự án">
                         <thead>
                             <tr>
-                                <th>STT</th>
-                                <th>Tên dự án</th>
-                                <th>Công nghệ</th>
-                                <th>Trạng thái</th>
-                                <th>Thao tác</th>
+                                <th scope="col">STT</th>
+                                <th scope="col">Tên dự án</th>
+                                <th scope="col">Công nghệ</th>
+                                <th scope="col">Trạng thái</th>
+                                <th scope="col">Thao tác</th>
                             </tr>
                         </thead>
-
-                        <tbody>
+                        <tbody id="project-table">
                             <tr>
                                 <td>1</td>
                                 <td>Website Portfolio cá nhân</td>
-                                <td>HTML5, CSS3</td>
+                                <td>HTML5, CSS3, JS</td>
                                 <td><span class="status done">Hoàn thành</span></td>
                                 <td>
-                                    <button class="btn-small">Sửa</button>
-                                    <button class="btn-small danger">Xóa</button>
+                                    <button class="btn-small" onclick="editProject(this)" type="button">✏️ Sửa</button>
+                                    <button class="btn-small danger" onclick="deleteProject(this)" type="button">🗑 Xóa</button>
                                 </td>
                             </tr>
-
                             <tr>
                                 <td>2</td>
                                 <td>Website tra cứu điểm chuẩn</td>
                                 <td>HTML, CSS, PHP, MySQL</td>
                                 <td><span class="status doing">Đang phát triển</span></td>
                                 <td>
-                                    <button class="btn-small">Sửa</button>
-                                    <button class="btn-small danger">Xóa</button>
+                                    <button class="btn-small" onclick="editProject(this)" type="button">✏️ Sửa</button>
+                                    <button class="btn-small danger" onclick="deleteProject(this)" type="button">🗑 Xóa</button>
                                 </td>
                             </tr>
-
                             <tr>
                                 <td>3</td>
                                 <td>Website giới thiệu sản phẩm</td>
                                 <td>HTML5, CSS3, Grid</td>
-                                <td>Hoàn thành</td>
+                                <td><span class="status done">Hoàn thành</span></td>
                                 <td>
-                                    <button class="btn-small">Sửa</button>
-                                    <button class="btn-small danger">Xóa</button>
+                                    <button class="btn-small" onclick="editProject(this)" type="button">✏️ Sửa</button>
+                                    <button class="btn-small danger" onclick="deleteProject(this)" type="button">🗑 Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Admin Dashboard</td>
+                                <td>HTML5, CSS3, JS</td>
+                                <td><span class="status done">Hoàn thành</span></td>
+                                <td>
+                                    <button class="btn-small" onclick="editProject(this)" type="button">✏️ Sửa</button>
+                                    <button class="btn-small danger" onclick="deleteProject(this)" type="button">🗑 Xóa</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -109,40 +178,174 @@
                 </div>
             </section>
 
-            <section class="admin-section">
+            <!-- Personal info form -->
+            <section class="admin-section" id="section-info">
                 <div class="toolbar">
-                    <div>
+                    <div class="toolbar-text">
                         <p>Cập nhật</p>
                         <h2>Thông tin cá nhân</h2>
                     </div>
                 </div>
 
-                <form class="admin-form">
+                <form class="admin-form" id="info-form" novalidate>
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Họ và tên</label>
-                            <input type="text" value="Họ Tên Của Bạn">
+                            <label for="fullname">Họ và tên</label>
+                            <input type="text" id="fullname" value="Nguyễn Văn Hào" placeholder="Nhập họ và tên" required>
                         </div>
-
                         <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" value="email@example.com">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" value="email@example.com" placeholder="Nhập email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại</label>
+                            <input type="tel" id="phone" value="0123 456 789" placeholder="Nhập số điện thoại">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Địa chỉ</label>
+                            <input type="text" id="address" value="Đắk Lắk, Việt Nam" placeholder="Nhập địa chỉ">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label>Mô tả bản thân</label>
-                        <textarea rows="5">Tôi là sinh viên đang học lập trình web, yêu thích thiết kế giao diện bằng HTML và CSS.</textarea>
+                        <label for="bio">Mô tả bản thân</label>
+                        <textarea id="bio" rows="4" placeholder="Viết vài dòng về bản thân...">Tôi là sinh viên ngành Hệ thống thông tin quản lý, yêu thích lập trình web và thiết kế giao diện bằng HTML, CSS và JavaScript.</textarea>
                     </div>
 
-                    <button type="button" class="btn btn-primary">Lưu thông tin</button>
-                    <p class="form-note">
-    * Đây là giao diện mô phỏng chức năng quản trị, chưa xử lý lưu dữ liệu thật.
-</p>
+                    <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+                        <button type="button" class="btn btn-primary" onclick="saveInfo()">💾 Lưu thông tin</button>
+                        <button type="button" class="btn btn-outline" onclick="resetInfo()">↺ Khôi phục</button>
+                    </div>
+
+                    <p class="form-note">* Giao diện mô phỏng — dữ liệu không được lưu vào server thật.</p>
                 </form>
             </section>
+
         </main>
     </div>
+
+    <!-- Confirm delete overlay -->
+    <div id="confirm-overlay" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+        <div class="confirm-box">
+            <h3 id="confirm-title">🗑 Xác nhận xóa</h3>
+            <p id="confirm-msg">Bạn có chắc muốn xóa dự án này không? Hành động này không thể hoàn tác.</p>
+            <div class="confirm-btns">
+                <button class="btn btn-outline" onclick="closeConfirm()" type="button">Hủy</button>
+                <button class="btn btn-primary" id="confirm-yes" type="button" style="background: var(--danger); box-shadow: none;">Xóa</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <script>
+    /* ---- Toast notification ---- */
+    function showToast(msg, duration = 2800) {
+        const toast = document.getElementById('toast');
+        toast.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), duration);
+    }
+
+    /* ---- Animated counter cho lượt xem ---- */
+    function animateCount(el, target, duration = 1200) {
+        let start = 0;
+        const step = Math.ceil(target / (duration / 16));
+        const timer = setInterval(() => {
+            start = Math.min(start + step, target);
+            el.textContent = start;
+            if (start >= target) clearInterval(timer);
+        }, 16);
+    }
+    animateCount(document.getElementById('view-count'), 128);
+
+    /* ---- Edit project (demo) ---- */
+    function editProject(btn) {
+        const row = btn.closest('tr');
+        const name = row.cells[1].textContent;
+        showToast('✏️ Đang chỉnh sửa: ' + name + ' (demo)');
+    }
+
+    /* ---- Delete project ---- */
+    let rowToDelete = null;
+
+    function deleteProject(btn) {
+        rowToDelete = btn.closest('tr');
+        const name = rowToDelete.cells[1].textContent;
+        document.getElementById('confirm-msg').textContent =
+            'Bạn có chắc muốn xóa "' + name + '"? Hành động này không thể hoàn tác.';
+        document.getElementById('confirm-overlay').classList.add('show');
+    }
+
+    document.getElementById('confirm-yes').addEventListener('click', () => {
+        if (rowToDelete) {
+            const name = rowToDelete.cells[1].textContent;
+            rowToDelete.remove();
+            rowToDelete = null;
+            updateRowNumbers();
+            updateProjectCount();
+            showToast('🗑 Đã xóa: ' + name);
+        }
+        closeConfirm();
+    });
+
+    function closeConfirm() {
+        document.getElementById('confirm-overlay').classList.remove('show');
+        rowToDelete = null;
+    }
+
+    /* Click ra ngoài để đóng confirm */
+    document.getElementById('confirm-overlay').addEventListener('click', function(e) {
+        if (e.target === this) closeConfirm();
+    });
+
+    /* Cập nhật STT sau khi xóa */
+    function updateRowNumbers() {
+        document.querySelectorAll('#project-table tr').forEach((row, i) => {
+            row.cells[0].textContent = i + 1;
+        });
+    }
+
+    /* Cập nhật stat card số dự án */
+    function updateProjectCount() {
+        const count = document.querySelectorAll('#project-table tr').length;
+        document.getElementById('count-projects').textContent =
+            String(count).padStart(2, '0');
+    }
+
+    /* ---- Add project (demo) ---- */
+    document.getElementById('add-btn').addEventListener('click', () => {
+        showToast('➕ Tính năng thêm dự án đang được phát triển…');
+    });
+
+    /* ---- Save info ---- */
+    function saveInfo() {
+        const name = document.getElementById('fullname').value.trim();
+        const email = document.getElementById('email').value.trim();
+        if (!name) { showToast('⚠️ Vui lòng nhập họ và tên.'); return; }
+        if (!email || !email.includes('@')) { showToast('⚠️ Email không hợp lệ.'); return; }
+        showToast('✅ Đã lưu thông tin thành công!');
+    }
+
+    /* ---- Reset info ---- */
+    function resetInfo() {
+        document.getElementById('fullname').value = 'Nguyễn Văn Hào';
+        document.getElementById('email').value = 'email@example.com';
+        document.getElementById('phone').value = '0123 456 789';
+        document.getElementById('address').value = 'Đắk Lắk, Việt Nam';
+        document.getElementById('bio').value = 'Tôi là sinh viên ngành Hệ thống thông tin quản lý, yêu thích lập trình web và thiết kế giao diện bằng HTML, CSS và JavaScript.';
+        showToast('↺ Đã khôi phục thông tin gốc.');
+    }
+
+    /* ---- Logout confirm ---- */
+    document.getElementById('logout-btn').addEventListener('click', (e) => {
+        if (!confirm('Bạn muốn đăng xuất không?')) e.preventDefault();
+    });
+    </script>
 
 </body>
 </html>
