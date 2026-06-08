@@ -3,192 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập — Portfolio Admin</title>
-    <meta name="robots" content="noindex, nofollow">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232563eb'/><text x='16' y='22' font-size='18' text-anchor='middle' fill='white' font-weight='bold'>H</text></svg>">
+    <title>Đăng nhập - Portfolio Admin</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Shake animation khi sai mật khẩu */
-        @keyframes shake {
-            0%,100% { transform: translateX(0); }
-            20%,60%  { transform: translateX(-8px); }
-            40%,80%  { transform: translateX(8px); }
-        }
-        .shake { animation: shake .4s ease; }
-
-        .login-input-wrap { position: relative; }
-        .toggle-pw {
-            position: absolute;
-            right: 14px; top: 50%;
-            transform: translateY(-50%);
-            background: none; border: none;
-            color: var(--subtle);
-            cursor: pointer;
-            font-size: 18px;
-            padding: 4px;
-            line-height: 1;
-        }
-        .toggle-pw:hover { color: var(--primary); }
-
-        .login-hint {
-            margin-top: 16px;
-            padding: 12px 16px;
-            background: #eff6ff;
-            border-radius: var(--radius-sm);
-            border-left: 4px solid var(--primary);
-            font-size: 13px;
-            color: var(--muted);
-        }
-        .login-hint strong { color: var(--primary); }
-
-        .form-error-msg { display: none; }
-        .form-error-msg.show { display: block; }
-
-        #login-error {
-            background: #fef2f2;
-            border: 1px solid #fecaca;
-            border-radius: var(--radius-sm);
-            padding: 12px 16px;
-            font-size: 14px;
-            color: var(--danger);
-            margin-bottom: 18px;
-            display: none;
-        }
-        #login-error.show { display: block; }
-    </style>
 </head>
 <body class="login-page">
-
-    <main class="login-container" role="main">
-        <form class="login-form" id="login-form" novalidate>
-
-            <div class="login-avatar" aria-hidden="true">PF</div>
-
+    <main class="login-container">
+        <form class="login-form" action="admin.html">
+            <div class="login-avatar">PF</div>
             <h1>Đăng nhập</h1>
             <p>Truy cập khu vực quản trị Portfolio cá nhân</p>
 
-            <!-- Thông báo lỗi chung -->
-            <div id="login-error" role="alert" aria-live="polite">
-                ⚠️ Tên đăng nhập hoặc mật khẩu không đúng. Vui lòng thử lại.
-            </div>
-
-            <!-- Username -->
             <div class="form-group">
                 <label for="username">Tên đăng nhập</label>
-                <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    placeholder="Nhập tên đăng nhập"
-                    autocomplete="username"
-                    required
-                    aria-required="true"
-                    aria-describedby="username-error"
-                >
-                <span class="form-error-msg" id="username-error" role="alert">Vui lòng nhập tên đăng nhập.</span>
+                <input type="text" id="username" name="username" placeholder="Nhập tên đăng nhập" required>
             </div>
 
-            <!-- Password -->
             <div class="form-group">
                 <label for="password">Mật khẩu</label>
-                <div class="login-input-wrap">
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="Nhập mật khẩu"
-                        autocomplete="current-password"
-                        required
-                        aria-required="true"
-                        aria-describedby="password-error"
-                    >
-                    <button type="button" class="toggle-pw" id="toggle-pw" aria-label="Hiện/ẩn mật khẩu">👁</button>
-                </div>
-                <span class="form-error-msg" id="password-error" role="alert">Vui lòng nhập mật khẩu.</span>
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
             </div>
 
-            <button type="submit" class="btn btn-primary full-width" id="submit-btn">
-                Đăng nhập
-            </button>
-
-            <!-- Gợi ý tài khoản demo -->
-            <div class="login-hint" role="note">
-                <strong>Tài khoản demo:</strong> admin / 123456
-            </div>
-
+            <button type="submit" class="btn btn-primary full-width">Đăng nhập</button>
+            <p class="form-note">Giao diện đăng nhập mô phỏng bằng HTML5 và CSS3.</p>
             <a href="index.html" class="back-home">← Quay lại trang chính</a>
         </form>
     </main>
-
-    <script>
-    const form     = document.getElementById('login-form');
-    const userInp  = document.getElementById('username');
-    const passInp  = document.getElementById('password');
-    const errBox   = document.getElementById('login-error');
-    const userErr  = document.getElementById('username-error');
-    const passErr  = document.getElementById('password-error');
-    const submitBtn= document.getElementById('submit-btn');
-    const togglePw = document.getElementById('toggle-pw');
-
-    /* Tài khoản demo */
-    const DEMO_USER = 'admin';
-    const DEMO_PASS = '123456';
-
-    /* Toggle hiện/ẩn mật khẩu */
-    togglePw.addEventListener('click', () => {
-        const isHidden = passInp.type === 'password';
-        passInp.type = isHidden ? 'text' : 'password';
-        togglePw.textContent = isHidden ? '🙈' : '👁';
-        togglePw.setAttribute('aria-label', isHidden ? 'Ẩn mật khẩu' : 'Hiện mật khẩu');
-    });
-
-    /* Xóa lỗi khi người dùng bắt đầu gõ */
-    userInp.addEventListener('input', () => {
-        userInp.classList.remove('error');
-        userErr.classList.remove('show');
-        errBox.classList.remove('show');
-    });
-    passInp.addEventListener('input', () => {
-        passInp.classList.remove('error');
-        passErr.classList.remove('show');
-        errBox.classList.remove('show');
-    });
-
-    /* Submit */
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        let valid = true;
-
-        /* Validate username */
-        if (!userInp.value.trim()) {
-            userInp.classList.add('error');
-            userErr.classList.add('show');
-            valid = false;
-        }
-
-        /* Validate password */
-        if (!passInp.value.trim()) {
-            passInp.classList.add('error');
-            passErr.classList.add('show');
-            valid = false;
-        }
-
-        if (!valid) return;
-
-        /* Kiểm tra tài khoản */
-        if (userInp.value.trim() === DEMO_USER && passInp.value === DEMO_PASS) {
-            submitBtn.textContent = '✓ Đang chuyển hướng…';
-            submitBtn.disabled = true;
-            setTimeout(() => { window.location.href = 'admin.html'; }, 700);
-        } else {
-            form.classList.add('shake');
-            errBox.classList.add('show');
-            passInp.value = '';
-            passInp.focus();
-            setTimeout(() => form.classList.remove('shake'), 400);
-        }
-    });
-    </script>
-
 </body>
 </html>
