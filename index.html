@@ -2,220 +2,737 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio cá nhân của Nguyễn Văn Hào — Sinh viên ngành Hệ thống thông tin quản lý.">
-    <title>Portfolio — Nguyễn Văn Hào</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Portfolio cá nhân của Nguyễn Văn Hào - Sinh viên năm 2 ngành Hệ thống thông tin."
+    >
+
+    <title>Portfolio - Nguyễn Văn Hào</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="portfolio-page">
 
-    <!-- ============================================================
-         HEADER / NAV — Flexbox: logo | menu | login
-         ============================================================ -->
-    <header class="portfolio-cover">
-        <nav class="portfolio-nav" aria-label="Điều hướng chính">
-            <a href="#home" class="portfolio-logo">NVH.</a>
+    <!-- ================= HEADER ================= -->
 
-            <ul class="main-menu">
-                <li><a href="#about"><span>01</span> Giới thiệu</a></li>
-                <li><a href="#skills"><span>02</span> Kỹ năng</a></li>
-                <li><a href="#projects"><span>03</span> Dự án</a></li>
-                <li><a href="#contact"><span>04</span> Liên hệ</a></li>
+    <header class="site-header">
+
+        <nav class="navbar" aria-label="Điều hướng chính">
+
+            <a href="#home" class="brand">
+                NVH<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#skills">Kỹ năng</a></li>
+                <li><a href="#projects">Dự án</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
             </ul>
 
-            <a href="login.html" class="btn btn-ghost nav-login">Đăng nhập</a>
+            <a href="login.html" class="btn btn-dark">
+                Đăng nhập
+            </a>
+
         </nav>
+
     </header>
 
-    <!-- ============================================================
-         MAIN CONTENT
-         ============================================================ -->
-    <main id="home" class="profile-container">
+    <main>
 
-        <!-- SECTION 01 — About / Hero -->
-        <section id="about" class="hero-profile-section">
-            <div class="hero-about-layout">
+        <!-- ================= HOME ================= -->
 
-                <!-- Avatar column — Flexbox (column) -->
-                <div class="hero-avatar-column">
-                    <div class="profile-avatar">
-                        <img src="avatar.jpg" alt="Ảnh đại diện Nguyễn Văn Hào" onerror="this.style.display='none'">
-                        <span class="check-icon">✓</span>
-                    </div>
-                    <span class="badge">Portfolio sinh viên</span>
+        <section id="home" class="hero section-shell">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    Portfolio cá nhân
+                </span>
+
+                <p class="hero-welcome">
+                    Xin chào, tôi là
+                </p>
+
+                <h1>Nguyễn Văn Hào</h1>
+
+                <h2>
+                    Sinh viên năm 2 ngành Hệ thống thông tin
+                </h2>
+
+                <p class="hero-subtitle">
+                    Đam mê công nghệ và phát triển hệ thống
+                </p>
+
+                <p class="hero-description">
+                    Tôi luôn chủ động học hỏi và ứng dụng công nghệ
+                    để giải quyết các bài toán thực tế, từng bước xây dựng
+                    những hệ thống rõ ràng, dễ sử dụng và phù hợp
+                    với nhu cầu của người dùng.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="#about" class="btn btn-accent">
+                        Khám phá hành trình của tôi
+                    </a>
+
+                    <a href="#projects" class="btn btn-outline">
+                        Xem dự án
+                    </a>
+
                 </div>
 
-                <!-- Content — Flexbox (column) -->
-                <div class="hero-about-content">
-                    <div class="section-heading">
-                        <span class="section-number">01</span>
-                        <div>
-                            <h1>Giới thiệu</h1>
-                            <div class="title-line"></div>
-                        </div>
-                    </div>
-
-                    <h2>Nguyễn Văn Hào</h2>
-                    <p class="profile-role">Sinh viên ngành Hệ thống thông tin quản lý</p>
-
-                    <p class="profile-description">
-                        Tôi yêu thích thiết kế giao diện website, lập trình web và xây dựng các hệ thống
-                        hỗ trợ quản lý thông tin. Trong quá trình học tập, tôi đang rèn luyện HTML5, CSS3,
-                        Flexbox, CSS Grid, Responsive Design, PHP và MySQL.
-                    </p>
-                    <p class="profile-description">
-                        Portfolio này được xây dựng bằng <strong>HTML5 và CSS3 thuần</strong> để giới thiệu
-                        bản thân, kỹ năng, định hướng nghề nghiệp và các dự án cá nhân.
-                    </p>
-
-                    <!-- Summary Grid — CSS Grid (2 cột) -->
-                    <div class="about-summary-grid">
-                        <article>
-                            <span>🎓</span>
-                            <div><h3>Ngành học</h3><p>Hệ thống thông tin quản lý</p></div>
-                        </article>
-                        <article>
-                            <span>🎯</span>
-                            <div><h3>Mục tiêu</h3><p>Thiết kế và phát triển website</p></div>
-                        </article>
-                        <article>
-                            <span>💡</span>
-                            <div><h3>Điểm mạnh</h3><p>Chăm chỉ và chủ động học hỏi</p></div>
-                        </article>
-                        <article>
-                            <span>🚀</span>
-                            <div><h3>Định hướng</h3><p>Frontend và quản lý dữ liệu</p></div>
-                        </article>
-                    </div>
-                </div>
             </div>
+
+            <div class="hero-visual">
+
+                <div class="hero-photo-shape"></div>
+
+                <div class="hero-photo-frame">
+
+                    <img
+                        src="avatar.jpg"
+                        alt="Ảnh cá nhân Nguyễn Văn Hào"
+                    >
+
+                </div>
+
+            </div>
+
         </section>
 
-        <div class="portfolio-content">
+        <!-- ================= ABOUT ================= -->
 
-            <!-- SECTION 02 — Skills -->
-            <section id="skills" class="content-section section-soft">
-                <div class="section-heading">
-                    <span class="section-number">02</span>
-                    <div><h2>Kỹ năng</h2><div class="title-line"></div></div>
+        <section
+            id="about"
+            class="about section-shell section-block"
+        >
+
+            <div class="section-heading centered-heading">
+
+                <span class="eyebrow">
+                    Về tôi
+                </span>
+
+                <h2>Giới thiệu bản thân</h2>
+
+                <p>
+                    Hành trình học tập, mục tiêu nghề nghiệp
+                    và định hướng phát triển của tôi.
+                </p>
+
+            </div>
+
+            <div class="about-simple-layout">
+
+                <div class="about-content">
+
+                    <span class="about-small-title">
+                        Tôi là ai?
+                    </span>
+
+                    <h3>
+                        Sinh viên Hệ thống thông tin yêu thích
+                        công nghệ, dữ liệu và phát triển hệ thống.
+                    </h3>
+
+                    <p>
+                        Xin chào, tôi là <strong>Nguyễn Văn Hào</strong>,
+                        hiện đang là sinh viên năm thứ 2 ngành Hệ thống thông tin
+                        tại Trường Đại học Giao thông Vận tải TP.HCM (UTH).
+                    </p>
+
+                    <p>
+                        Xuất phát từ sự tò mò và niềm yêu thích công nghệ,
+                        tôi luôn muốn tìm hiểu cách phần mềm, cơ sở dữ liệu
+                        và các hệ thống thông tin được thiết kế, xây dựng
+                        và vận hành.
+                    </p>
+
+                    <p>
+                        Việc học ngành Hệ thống thông tin giúp tôi không chỉ
+                        tiếp cận với lập trình mà còn hiểu thêm về cách phân tích,
+                        tổ chức dữ liệu và ứng dụng công nghệ để giải quyết
+                        các vấn đề trong thực tế.
+                    </p>
+
+                    <div class="about-info-grid">
+
+                        <article>
+
+                            <span>🎓</span>
+
+                            <div>
+                                <small>Trường học</small>
+
+                                <strong>
+                                    Đại học Giao thông Vận tải TP.HCM
+                                </strong>
+                            </div>
+
+                        </article>
+
+                        <article>
+
+                            <span>📘</span>
+
+                            <div>
+                                <small>Ngành học</small>
+
+                                <strong>
+                                    Hệ thống thông tin
+                                </strong>
+                            </div>
+
+                        </article>
+
+                        <article>
+
+                            <span>🚀</span>
+
+                            <div>
+                                <small>Định hướng</small>
+
+                                <strong>
+                                    Dữ liệu và phân tích hệ thống
+                                </strong>
+                            </div>
+
+                        </article>
+
+                    </div>
+
                 </div>
-                <p class="intro-text">Những kỹ năng tôi đang học tập, thực hành và tiếp tục phát triển.</p>
 
-                <!-- Service Grid — CSS Grid (3 cột) -->
-                <div class="service-grid">
-                    <article class="service-card">
-                        <div class="service-icon">💻</div>
-                        <h3>HTML5</h3>
-                        <p>Xây dựng cấu trúc website rõ ràng, đúng ngữ nghĩa và dễ chỉnh sửa.</p>
+                <!-- MỤC TIÊU NGHỀ NGHIỆP -->
+
+                <div class="career-goals">
+
+                    <article class="goal-card">
+
+                        <span class="goal-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <small>
+                                Mục tiêu ngắn hạn · 1 năm tới
+                            </small>
+
+                            <h3>
+                                Củng cố kiến thức nền tảng
+                            </h3>
+
+                            <p>
+                                Tiếp tục rèn luyện lập trình,
+                                cơ sở dữ liệu, tư duy phân tích
+                                và các công cụ thiết kế giao diện,
+                                quy trình hệ thống.
+                            </p>
+
+                            <p>
+                                Mục tiêu quan trọng là tìm kiếm cơ hội thực tập
+                                ở vị trí liên quan đến dữ liệu,
+                                phân tích nghiệp vụ hoặc phát triển hệ thống
+                                để tích lũy kinh nghiệm thực tế.
+                            </p>
+
+                        </div>
+
                     </article>
-                    <article class="service-card">
-                        <div class="service-icon">🎨</div>
-                        <h3>CSS3</h3>
-                        <p>Thiết kế giao diện, phối màu, tạo hiệu ứng và trình bày cân đối.</p>
+
+                    <article class="goal-card">
+
+                        <span class="goal-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <small>
+                                Mục tiêu dài hạn · 2–3 năm tới
+                            </small>
+
+                            <h3>
+                                Phát triển thành chuyên viên hệ thống
+                            </h3>
+
+                            <p>
+                                Hoàn thành tốt chương trình đại học,
+                                xây dựng từ 3 đến 5 dự án có tính ứng dụng
+                                và tiếp tục hoàn thiện Portfolio cá nhân.
+                            </p>
+
+                            <p>
+                                Định hướng trở thành chuyên viên phân tích,
+                                phát triển hệ thống hoặc làm việc
+                                trong lĩnh vực dữ liệu.
+                            </p>
+
+                        </div>
+
                     </article>
-                    <article class="service-card">
-                        <div class="service-icon">📐</div>
-                        <h3>Flexbox</h3>
-                        <p>Sắp xếp navbar, nút bấm và các nhóm nội dung theo hàng hoặc cột.</p>
-                    </article>
-                    <article class="service-card">
-                        <div class="service-icon">▦</div>
-                        <h3>CSS Grid</h3>
-                        <p>Chia bố cục lớn, danh sách dự án và giao diện trang quản trị.</p>
-                    </article>
-                    <article class="service-card">
-                        <div class="service-icon">📱</div>
-                        <h3>Responsive</h3>
-                        <p>Tối ưu giao diện trên desktop, tablet và điện thoại di động.</p>
-                    </article>
-                    <article class="service-card">
-                        <div class="service-icon">🗄️</div>
-                        <h3>PHP &amp; MySQL</h3>
-                        <p>Kiến thức cơ bản về xử lý dữ liệu và kết nối cơ sở dữ liệu.</p>
-                    </article>
+
                 </div>
-            </section>
 
-            <!-- SECTION 03 — Projects -->
-            <section id="projects" class="content-section">
-                <div class="section-heading">
-                    <span class="section-number">03</span>
-                    <div><h2>Dự án cá nhân</h2><div class="title-line"></div></div>
+            </div>
+
+        </section>
+
+        <!-- ================= SKILLS ================= -->
+
+        <section
+            id="skills"
+            class="skills section-block section-soft"
+        >
+
+            <div class="section-shell">
+
+                <div class="section-heading centered-heading">
+
+                    <span class="eyebrow">
+                        Năng lực
+                    </span>
+
+                    <h2>Kỹ năng của tôi</h2>
+
+                    <p>
+                        Các công nghệ, công cụ và kỹ năng tôi đã được học,
+                        thực hành hoặc đang tiếp tục tìm hiểu.
+                    </p>
+
                 </div>
-                <p class="intro-text">Một số dự án tôi đã thực hiện trong quá trình học tập.</p>
 
-                <!-- Project Grid — CSS Grid (2 cột) -->
-                <div class="project-grid">
-                    <article class="project-card">
-                        <span class="num">01</span>
-                        <h3>Website Portfolio cá nhân</h3>
-                        <p>Website giới thiệu bản thân, kỹ năng, dự án và thông tin liên hệ.</p>
-                        <p><strong>Vai trò:</strong> Thiết kế giao diện, bố cục và responsive.</p>
-                        <span class="tech-tag">HTML5 · CSS3 · Responsive</span>
-                    </article>
-                    <article class="project-card">
-                        <span class="num">02</span>
-                        <h3>Website tra cứu điểm chuẩn</h3>
-                        <p>Tra cứu theo trường, ngành, năm và phương thức xét tuyển.</p>
-                        <p><strong>Vai trò:</strong> Xây dựng giao diện, bộ lọc và kết nối dữ liệu.</p>
-                        <span class="tech-tag">HTML · CSS · PHP · MySQL</span>
-                    </article>
-                    <article class="project-card">
-                        <span class="num">03</span>
-                        <h3>Website giới thiệu sản phẩm</h3>
-                        <p>Giao diện có menu, banner, danh sách sản phẩm và khu vực tin tức.</p>
-                        <p><strong>Vai trò:</strong> Xây dựng bố cục bằng Flexbox và CSS Grid.</p>
-                        <span class="tech-tag">HTML5 · CSS3 · Flexbox · Grid</span>
-                    </article>
-                    <article class="project-card">
-                        <span class="num">04</span>
-                        <h3>Admin Dashboard</h3>
-                        <p>Trang quản trị mô phỏng quản lý thông tin cá nhân và dự án.</p>
-                        <p><strong>Vai trò:</strong> Thiết kế layout, form và bảng dữ liệu.</p>
-                        <span class="tech-tag">HTML5 · CSS3 · Grid Layout</span>
-                    </article>
+                <!-- NHÓM 1 -->
+
+                <div class="skill-category">
+
+                    <div class="skill-category-heading">
+
+                        <span>01</span>
+
+                        <div>
+                            <small>Kiến thức đã thực hành</small>
+
+                            <h3>
+                                Ngôn ngữ và cơ sở dữ liệu
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="skill-tag-list">
+                        <span>Python cơ bản</span>
+                        <span>C++ cơ bản</span>
+                        <span>PHP cơ bản</span>
+                        <span>JavaScript cơ bản</span>
+                        <span>MySQL</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>Flexbox</span>
+                        <span>CSS Grid</span>
+                        <span>Responsive Design</span>
+                    </div>
+
                 </div>
-            </section>
 
-            <!-- SECTION 04 — Contact -->
-            <section id="contact" class="content-section section-soft">
-                <div class="section-heading">
-                    <span class="section-number">04</span>
-                    <div><h2>Liên hệ</h2><div class="title-line"></div></div>
+                <!-- NHÓM 2 -->
+
+                <div class="skill-category">
+
+                    <div class="skill-category-heading">
+
+                        <span>02</span>
+
+                        <div>
+                            <small>Công cụ hỗ trợ</small>
+
+                            <h3>
+                                Thiết kế và quản lý dự án
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="skill-tag-list">
+                        <span>Draw.io</span>
+                        <span>Figma cơ bản</span>
+                        <span>Visual Studio Code</span>
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>Microsoft Excel cơ bản</span>
+                    </div>
+
                 </div>
-                <p class="intro-text">Tôi luôn sẵn sàng trao đổi, học hỏi và tham gia các dự án học tập.</p>
 
-                <!-- Contact Grid — CSS Grid (2 cột) -->
-                <div class="contact-grid">
-                    <article class="contact-card">
-                        <h3>📧 Email</h3>
-                        <p><a href="mailto:email@example.com">email@example.com</a></p>
-                        <small>Phản hồi trong vòng 24 giờ</small>
-                    </article>
-                    <article class="contact-card">
-                        <h3>📞 Điện thoại</h3>
-                        <p><a href="tel:0123456789">0123 456 789</a></p>
-                        <small>Liên hệ trong giờ hành chính</small>
-                    </article>
-                    <article class="contact-card">
-                        <h3>📍 Địa chỉ</h3>
-                        <p>Đắk Lắk, Việt Nam</p>
-                        <small>Sẵn sàng học tập và làm việc trực tuyến</small>
-                    </article>
-                    <article class="contact-card">
-                        <h3>✅ Trạng thái</h3>
-                        <p>Đang học tập và phát triển</p>
-                        <small>Sẵn sàng tham gia dự án học thuật</small>
-                    </article>
+                <!-- NHÓM 3 -->
+
+                <div class="skill-category">
+
+                    <div class="skill-category-heading">
+
+                        <span>03</span>
+
+                        <div>
+                            <small>Năng lực cá nhân</small>
+
+                            <h3>
+                                Kỹ năng mềm
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="skill-tag-list">
+                        <span>Tư duy logic</span>
+                        <span>Nghiên cứu và tự học</span>
+                        <span>Làm việc nhóm</span>
+                        <span>Giải quyết vấn đề</span>
+                        <span>Tổ chức thông tin</span>
+                    </div>
+
                 </div>
-            </section>
 
-        </div><!-- end .portfolio-content -->
+                <!-- ĐANG TÌM HIỂU -->
+
+                <div class="learning-box">
+
+                    <span>📚</span>
+
+                    <div>
+
+                        <small>
+                            Đang tiếp tục tìm hiểu
+                        </small>
+
+                        <p>
+                            SQL Server, Power BI, Tableau và Microsoft Visio
+                            là những công cụ tôi định hướng học thêm
+                            để hỗ trợ phân tích dữ liệu và thiết kế hệ thống.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section
+            id="projects"
+            class="projects section-shell section-block"
+        >
+
+            <div class="section-heading heading-row">
+
+                <div>
+
+                    <span class="eyebrow">
+                        Sản phẩm
+                    </span>
+
+                    <h2>Dự án nổi bật</h2>
+
+                </div>
+
+                <p>
+                    Các bài tập lớn và dự án tôi đã thực hiện
+                    trong quá trình học tập.
+                </p>
+
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- PROJECT 1 -->
+
+                <article class="project-card">
+
+                    <div class="project-preview preview-one">
+                        <span>Portfolio</span>
+                    </div>
+
+                    <div class="project-body">
+
+                        <small>
+                            01 · Website cá nhân
+                        </small>
+
+                        <h3>
+                            Portfolio Nguyễn Văn Hào
+                        </h3>
+
+                        <p>
+                            Website giới thiệu bản thân, kỹ năng,
+                            định hướng nghề nghiệp và các dự án cá nhân.
+                        </p>
+
+                        <p class="project-role">
+                            <strong>Vai trò:</strong>
+                            Thiết kế giao diện và xây dựng bố cục responsive.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Flexbox</span>
+                            <span>CSS Grid</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/haonv2182-creator/PORTFOLIO"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-link"
+                        >
+                            Xem trên GitHub →
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- PROJECT 2 -->
+
+                <article class="project-card">
+
+                    <div class="project-preview preview-two">
+                        <span>Điểm chuẩn</span>
+                    </div>
+
+                    <div class="project-body">
+
+                        <small>
+                            02 · Website tra cứu
+                        </small>
+
+                        <h3>
+                            Hệ thống tra cứu điểm chuẩn
+                        </h3>
+
+                        <p>
+                            Website hỗ trợ tra cứu điểm chuẩn theo trường,
+                            ngành, năm tuyển sinh và phương thức xét tuyển.
+                        </p>
+
+                        <p class="project-role">
+                            <strong>Vai trò:</strong>
+                            Xây dựng giao diện, chức năng tìm kiếm,
+                            bộ lọc và kết nối cơ sở dữ liệu.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/haonv2182-creator/TraCuuDiemChuannew"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-link"
+                        >
+                            Xem trên GitHub →
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- PROJECT 3 -->
+
+                <article class="project-card">
+
+                    <div class="project-preview preview-three">
+                        <span>Nhà Sinh Viên</span>
+                    </div>
+
+                    <div class="project-body">
+
+                        <small>
+                            03 · Website quản lý
+                        </small>
+
+                        <h3>
+                            Website quản lý Nhà Sinh Viên
+                        </h3>
+
+                        <p>
+                            Website quản lý lịch trực, hoạt động
+                            và sự kiện dành cho khu Nhà Sinh Viên.
+                        </p>
+
+                        <p class="project-role">
+                            <strong>Vai trò:</strong>
+                            Xây dựng giao diện và chức năng thêm,
+                            sửa, xóa, lưu dữ liệu trên trình duyệt.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Local Storage</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/haonv2182-creator/Mobile"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-link"
+                        >
+                            Xem trên GitHub →
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- PROJECT 4 -->
+
+                <article class="project-card">
+
+                    <div class="project-preview preview-four">
+                        <span>CPU Scheduling</span>
+                    </div>
+
+                    <div class="project-body">
+
+                        <small>
+                            04 · Đồ án Hệ điều hành
+                        </small>
+
+                        <h3>
+                            Mô phỏng thuật toán lập lịch CPU
+                        </h3>
+
+                        <p>
+                            Ứng dụng mô phỏng thuật toán FCFS
+                            và Priority Scheduling, hỗ trợ nhập tiến trình
+                            và xem kết quả xử lý.
+                        </p>
+
+                        <p class="project-role">
+                            <strong>Vai trò:</strong>
+                            Thành viên nhóm phát triển và thực hiện đồ án.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Tkinter</span>
+                            <span>CSV</span>
+                            <span>Hệ điều hành</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/haonv2182-creator/HeDieuHanh"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-link"
+                        >
+                            Xem trên GitHub →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- ================= CONTACT ================= -->
+
+        <section
+            id="contact"
+            class="contact section-block section-dark"
+        >
+
+            <div class="section-shell">
+
+                <div class="section-heading contact-heading">
+
+                    <span class="eyebrow light-eyebrow">
+                        Kết nối
+                    </span>
+
+                    <h2>Liên hệ với tôi</h2>
+
+                    <p>
+                        Tôi luôn sẵn sàng trao đổi, học hỏi
+                        và kết nối về các dự án công nghệ,
+                        dữ liệu và phát triển hệ thống.
+                    </p>
+
+                </div>
+
+                <div class="contact-simple-grid">
+
+                    <a
+                        href="mailto:email@example.com"
+                        class="contact-simple-card"
+                    >
+
+                        <span>📧</span>
+
+                        <div>
+                            <small>Email</small>
+                            <strong>Haon200611@gmail.com</strong>
+                        </div>
+
+                    </a>
+
+                    <a
+                        href="tel:0123456789"
+                        class="contact-simple-card"
+                    >
+
+                        <span>📞</span>
+
+                        <div>
+                            <small>Điện thoại</small>
+                            <strong>0123 456 789</strong>
+                        </div>
+
+                    </a>
+
+                    <a
+                        href="https://github.com/haonv2182-creator"
+                        target="_blank"
+                        rel="noopener"
+                        class="contact-simple-card"
+                    >
+
+                        <span>💻</span>
+
+                        <div>
+                            <small>GitHub</small>
+                            <strong>haonv2182-creator</strong>
+                        </div>
+
+                    </a>
+
+                </div>
+            </div>
+
+        </section>
+
     </main>
-
-    <footer class="portfolio-footer">
-        <p>© 2026 Nguyễn Văn Hào &mdash; Portfolio thuần HTML5 và CSS3.</p>
-    </footer>
 
 </body>
 </html>

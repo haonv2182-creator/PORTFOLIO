@@ -3,83 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard — Portfolio</title>
+
+    <meta
+        name="description"
+        content="Trang quản trị Portfolio cá nhân Nguyễn Văn Hào."
+    >
+
+    <title>Admin Dashboard - Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <!-- Admin Layout — CSS Grid (sidebar | main) -->
+<body class="admin-page">
+
     <div class="admin-layout">
 
-        <!-- ====================================================
-             SIDEBAR — Flexbox (column)
-             ==================================================== -->
-        <aside class="sidebar">
-            <div class="sidebar-logo">PF</div>
-            <h2>Portfolio Admin</h2>
-            <p class="sidebar-tagline">Nguyễn Văn Hào</p>
+        <!-- SIDEBAR -->
+        <aside class="admin-sidebar">
 
-            <ul class="sidebar-menu">
-                <li><a href="#overview">📊 Tổng quan</a></li>
-                <li><a href="#projects-admin">📦 Dự án</a></li>
-                <li><a href="#personal-info">👤 Thông tin cá nhân</a></li>
-                <li><a href="index.html">🌐 Xem trang chính</a></li>
-            </ul>
+            <a href="index.html" class="brand admin-brand">
+                NVH<span>.</span>
+            </a>
+
+            <div class="admin-profile">
+
+                <div class="admin-avatar">
+                    NH
+                </div>
+
+                <div>
+                    <strong>Nguyễn Văn Hào</strong>
+                    <small>Portfolio Admin</small>
+                </div>
+
+            </div>
+
+            <nav aria-label="Điều hướng quản trị">
+
+                <ul class="admin-menu">
+
+                    <li>
+                        <a href="#overview" class="active">
+                            <span>📊</span>
+                            Tổng quan
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#projects-admin">
+                            <span>📦</span>
+                            Dự án
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#personal-info">
+                            <span>👤</span>
+                            Thông tin cá nhân
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html">
+                            <span>🌐</span>
+                            Xem trang chính
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <a href="login.html" class="admin-logout">
+                Đăng xuất
+            </a>
+
         </aside>
 
-        <!-- ====================================================
-             MAIN CONTENT
-             ==================================================== -->
-        <main class="admin-main">
+        <!-- MAIN -->
+        <main class="admin-content">
 
-            <!-- Header — Flexbox (space-between) -->
             <header class="admin-header" id="overview">
+
                 <div>
-                    <p>Xin chào, Văn Hào</p>
-                    <h1>Trang quản trị Portfolio</h1>
+
+                    <span class="eyebrow">
+                        Dashboard
+                    </span>
+
+                    <h1>
+                        Trang quản trị Portfolio
+                    </h1>
+
+                    <p>
+                        Quản lý thông tin cá nhân và danh sách dự án.
+                    </p>
+
                 </div>
-                <a href="login.html" class="btn btn-outline">Đăng xuất</a>
+
+                <a
+                    href="index.html"
+                    class="btn btn-outline"
+                >
+                    Xem trang chính
+                </a>
+
             </header>
 
-            <!-- Stats — CSS Grid (3 cột) -->
-            <section class="stat-grid" aria-label="Thống kê tổng quan">
-                <article class="stat-card">
-                    <div class="stat-icon">📦</div>
+            <!-- THỐNG KÊ -->
+            <section class="admin-stat-grid">
+
+                <article class="admin-stat-card">
+
+                    <span class="admin-stat-icon">
+                        📦
+                    </span>
+
                     <div>
                         <strong>04</strong>
-                        <p>Dự án</p>
+                        <p>Dự án cá nhân</p>
                     </div>
+
                 </article>
-                <article class="stat-card">
-                    <div class="stat-icon">🛠</div>
+
+                <article class="admin-stat-card">
+
+                    <span class="admin-stat-icon">
+                        🛠️
+                    </span>
+
                     <div>
                         <strong>06</strong>
-                        <p>Kỹ năng</p>
+                        <p>Kỹ năng chính</p>
                     </div>
+
                 </article>
-                <article class="stat-card">
-                    <div class="stat-icon">📝</div>
+
+                <article class="admin-stat-card">
+
+                    <span class="admin-stat-icon">
+                        📄
+                    </span>
+
                     <div>
                         <strong>03</strong>
                         <p>Trang giao diện</p>
                     </div>
+
                 </article>
+
             </section>
 
-            <!-- Projects Table -->
-            <section class="admin-section" id="projects-admin">
-                <!-- Toolbar — Flexbox (space-between) -->
-                <div class="toolbar">
+            <!-- DANH SÁCH DỰ ÁN -->
+            <section
+                id="projects-admin"
+                class="admin-section"
+            >
+
+                <div class="admin-toolbar">
+
                     <div>
-                        <p>Quản lý nội dung</p>
-                        <h2>Danh sách dự án</h2>
+
+                        <span class="eyebrow">
+                            Nội dung
+                        </span>
+
+                        <h2>
+                            Danh sách dự án
+                        </h2>
+
                     </div>
-                    <button type="button" class="btn btn-primary">+ Thêm dự án</button>
+
+                    <button
+                        type="button"
+                        class="btn btn-accent"
+                    >
+                        + Thêm dự án
+                    </button>
+
                 </div>
 
-                <div class="table-box">
+                <div class="table-wrapper">
+
                     <table>
+
                         <thead>
+
                             <tr>
                                 <th>STT</th>
                                 <th>Tên dự án</th>
@@ -87,100 +196,300 @@
                                 <th>Trạng thái</th>
                                 <th>Thao tác</th>
                             </tr>
+
                         </thead>
+
                         <tbody>
+
                             <tr>
-                                <td>1</td>
-                                <td>Website Portfolio cá nhân</td>
-                                <td>HTML5, CSS3</td>
-                                <td><span class="status done">Hoàn thành</span></td>
+
+                                <td>01</td>
+
                                 <td>
-                                    <button type="button" class="btn-small">Sửa</button>
-                                    <button type="button" class="btn-small danger">Xóa</button>
+                                    Website Portfolio cá nhân
                                 </td>
+
+                                <td>
+                                    HTML5, CSS3, Responsive
+                                </td>
+
+                                <td>
+                                    <span class="status status-done">
+                                        Hoàn thành
+                                    </span>
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        type="button"
+                                        class="table-button"
+                                    >
+                                        Sửa
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="table-button danger"
+                                    >
+                                        Xóa
+                                    </button>
+
+                                </td>
+
                             </tr>
+
                             <tr>
-                                <td>2</td>
-                                <td>Website tra cứu điểm chuẩn</td>
-                                <td>HTML, CSS, PHP, MySQL</td>
-                                <td><span class="status doing">Đang phát triển</span></td>
+
+                                <td>02</td>
+
                                 <td>
-                                    <button type="button" class="btn-small">Sửa</button>
-                                    <button type="button" class="btn-small danger">Xóa</button>
+                                    Website tra cứu điểm chuẩn
                                 </td>
+
+                                <td>
+                                    PHP, MySQL, CSS
+                                </td>
+
+                                <td>
+                                    <span class="status status-progress">
+                                        Đang phát triển
+                                    </span>
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        type="button"
+                                        class="table-button"
+                                    >
+                                        Sửa
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="table-button danger"
+                                    >
+                                        Xóa
+                                    </button>
+
+                                </td>
+
                             </tr>
+
                             <tr>
-                                <td>3</td>
-                                <td>Website giới thiệu sản phẩm</td>
-                                <td>HTML5, CSS3, Grid</td>
-                                <td><span class="status done">Hoàn thành</span></td>
+
+                                <td>03</td>
+
                                 <td>
-                                    <button type="button" class="btn-small">Sửa</button>
-                                    <button type="button" class="btn-small danger">Xóa</button>
+                                    Website giới thiệu sản phẩm
                                 </td>
+
+                                <td>
+                                    HTML5, Flexbox, Grid
+                                </td>
+
+                                <td>
+                                    <span class="status status-done">
+                                        Hoàn thành
+                                    </span>
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        type="button"
+                                        class="table-button"
+                                    >
+                                        Sửa
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="table-button danger"
+                                    >
+                                        Xóa
+                                    </button>
+
+                                </td>
+
                             </tr>
+
                             <tr>
-                                <td>4</td>
-                                <td>Admin Dashboard</td>
-                                <td>HTML5, CSS3</td>
-                                <td><span class="status done">Hoàn thành</span></td>
+
+                                <td>04</td>
+
                                 <td>
-                                    <button type="button" class="btn-small">Sửa</button>
-                                    <button type="button" class="btn-small danger">Xóa</button>
+                                    Admin Dashboard
                                 </td>
+
+                                <td>
+                                    HTML5, CSS Grid, Form
+                                </td>
+
+                                <td>
+                                    <span class="status status-done">
+                                        Hoàn thành
+                                    </span>
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        type="button"
+                                        class="table-button"
+                                    >
+                                        Sửa
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="table-button danger"
+                                    >
+                                        Xóa
+                                    </button>
+
+                                </td>
+
                             </tr>
+
                         </tbody>
+
                     </table>
+
                 </div>
+
             </section>
 
-            <!-- Personal Info Form -->
-            <section class="admin-section" id="personal-info">
-                <div class="toolbar">
+            <!-- THÔNG TIN CÁ NHÂN -->
+            <section
+                id="personal-info"
+                class="admin-section"
+            >
+
+                <div class="admin-toolbar">
+
                     <div>
-                        <p>Cập nhật</p>
-                        <h2>Thông tin cá nhân</h2>
+
+                        <span class="eyebrow">
+                            Hồ sơ
+                        </span>
+
+                        <h2>
+                            Thông tin cá nhân
+                        </h2>
+
                     </div>
+
                 </div>
 
-                <!-- Form — CSS Grid (form-row 2 cột) -->
-                <div class="admin-form">
+                <form class="admin-form">
+
                     <div class="form-row">
+
                         <div class="form-group">
-                            <label for="fullname">Họ và tên</label>
-                            <input type="text" id="fullname" value="Nguyễn Văn Hào">
+
+                            <label for="fullname">
+                                Họ và tên
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fullname"
+                                value="Nguyễn Văn Hào"
+                            >
+
                         </div>
+
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" value="email@example.com">
+
+                            <label for="email">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                value="email@example.com"
+                            >
+
                         </div>
+
                     </div>
+
                     <div class="form-row">
+
                         <div class="form-group">
-                            <label for="phone">Số điện thoại</label>
-                            <input type="tel" id="phone" value="0123 456 789">
+
+                            <label for="phone">
+                                Số điện thoại
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                value="0123 456 789"
+                            >
+
                         </div>
+
                         <div class="form-group">
-                            <label for="address">Địa chỉ</label>
-                            <input type="text" id="address" value="Đắk Lắk, Việt Nam">
+
+                            <label for="address">
+                                Địa chỉ
+                            </label>
+
+                            <input
+                                type="text"
+                                id="address"
+                                value="Đắk Lắk, Việt Nam"
+                            >
+
                         </div>
+
                     </div>
+
                     <div class="form-group">
-                        <label for="bio">Mô tả bản thân</label>
-                        <textarea id="bio" rows="5">Sinh viên ngành Hệ thống thông tin quản lý, yêu thích lập trình web và thiết kế giao diện.</textarea>
+
+                        <label for="bio">
+                            Mô tả bản thân
+                        </label>
+
+                        <textarea
+                            id="bio"
+                            rows="5"
+                        >Tôi là sinh viên ngành Hệ thống thông tin quản lý, yêu thích thiết kế giao diện website và xây dựng các hệ thống hỗ trợ quản lý thông tin.</textarea>
+
                     </div>
 
-                    <!-- Form Actions — Flexbox (row) -->
-                    <div class="form-actions">
-                        <button type="button" class="btn btn-primary">Lưu thông tin</button>
-                        <button type="button" class="btn btn-outline">Khôi phục</button>
+                    <div class="admin-form-actions">
+
+                        <button
+                            type="button"
+                            class="btn btn-accent"
+                        >
+                            Lưu thông tin
+                        </button>
+
+                        <button
+                            type="reset"
+                            class="btn btn-outline"
+                        >
+                            Khôi phục
+                        </button>
+
                     </div>
 
-                    <p class="form-note">Giao diện quản trị mô phỏng, không lưu dữ liệu vào máy chủ.</p>
-                </div>
+                    <p class="form-note">
+                        Giao diện mô phỏng, dữ liệu không được lưu vào máy chủ.
+                    </p>
+
+                </form>
+
             </section>
 
         </main>
+
     </div>
 
 </body>
