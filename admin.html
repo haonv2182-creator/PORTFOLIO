@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Portfolio</title>
+    <title>Admin Dashboard — Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Admin Layout — CSS Grid (sidebar | main) -->
     <div class="admin-layout">
+
+        <!-- ====================================================
+             SIDEBAR — Flexbox (column)
+             ==================================================== -->
         <aside class="sidebar">
             <div class="sidebar-logo">PF</div>
             <h2>Portfolio Admin</h2>
             <p class="sidebar-tagline">Nguyễn Văn Hào</p>
+
             <ul class="sidebar-menu">
                 <li><a href="#overview">📊 Tổng quan</a></li>
                 <li><a href="#projects-admin">📦 Dự án</a></li>
@@ -20,54 +27,161 @@
             </ul>
         </aside>
 
+        <!-- ====================================================
+             MAIN CONTENT
+             ==================================================== -->
         <main class="admin-main">
+
+            <!-- Header — Flexbox (space-between) -->
             <header class="admin-header" id="overview">
-                <div><p>Xin chào, Văn Hào</p><h1>Trang quản trị Portfolio</h1></div>
+                <div>
+                    <p>Xin chào, Văn Hào</p>
+                    <h1>Trang quản trị Portfolio</h1>
+                </div>
                 <a href="login.html" class="btn btn-outline">Đăng xuất</a>
             </header>
 
-            <section class="stat-grid">
-                <article class="stat-card"><div class="stat-icon">📦</div><strong>04</strong><p>Dự án</p></article>
-                <article class="stat-card"><div class="stat-icon">🛠</div><strong>06</strong><p>Kỹ năng</p></article>
-                <article class="stat-card"><div class="stat-icon">📝</div><strong>03</strong><p>Trang giao diện</p></article>
+            <!-- Stats — CSS Grid (3 cột) -->
+            <section class="stat-grid" aria-label="Thống kê tổng quan">
+                <article class="stat-card">
+                    <div class="stat-icon">📦</div>
+                    <div>
+                        <strong>04</strong>
+                        <p>Dự án</p>
+                    </div>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-icon">🛠</div>
+                    <div>
+                        <strong>06</strong>
+                        <p>Kỹ năng</p>
+                    </div>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-icon">📝</div>
+                    <div>
+                        <strong>03</strong>
+                        <p>Trang giao diện</p>
+                    </div>
+                </article>
             </section>
 
+            <!-- Projects Table -->
             <section class="admin-section" id="projects-admin">
+                <!-- Toolbar — Flexbox (space-between) -->
                 <div class="toolbar">
-                    <div><p>Quản lý nội dung</p><h2>Danh sách dự án</h2></div>
+                    <div>
+                        <p>Quản lý nội dung</p>
+                        <h2>Danh sách dự án</h2>
+                    </div>
                     <button type="button" class="btn btn-primary">+ Thêm dự án</button>
                 </div>
 
                 <div class="table-box">
                     <table>
-                        <thead><tr><th>STT</th><th>Tên dự án</th><th>Công nghệ</th><th>Trạng thái</th><th>Thao tác</th></tr></thead>
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên dự án</th>
+                                <th>Công nghệ</th>
+                                <th>Trạng thái</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
                         <tbody>
-                            <tr><td>1</td><td>Website Portfolio cá nhân</td><td>HTML5, CSS3</td><td><span class="status done">Hoàn thành</span></td><td><button class="btn-small">Sửa</button> <button class="btn-small danger">Xóa</button></td></tr>
-                            <tr><td>2</td><td>Website tra cứu điểm chuẩn</td><td>HTML, CSS, PHP, MySQL</td><td><span class="status doing">Đang phát triển</span></td><td><button class="btn-small">Sửa</button> <button class="btn-small danger">Xóa</button></td></tr>
-                            <tr><td>3</td><td>Website giới thiệu sản phẩm</td><td>HTML5, CSS3, Grid</td><td><span class="status done">Hoàn thành</span></td><td><button class="btn-small">Sửa</button> <button class="btn-small danger">Xóa</button></td></tr>
-                            <tr><td>4</td><td>Admin Dashboard</td><td>HTML5, CSS3</td><td><span class="status done">Hoàn thành</span></td><td><button class="btn-small">Sửa</button> <button class="btn-small danger">Xóa</button></td></tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Website Portfolio cá nhân</td>
+                                <td>HTML5, CSS3</td>
+                                <td><span class="status done">Hoàn thành</span></td>
+                                <td>
+                                    <button type="button" class="btn-small">Sửa</button>
+                                    <button type="button" class="btn-small danger">Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Website tra cứu điểm chuẩn</td>
+                                <td>HTML, CSS, PHP, MySQL</td>
+                                <td><span class="status doing">Đang phát triển</span></td>
+                                <td>
+                                    <button type="button" class="btn-small">Sửa</button>
+                                    <button type="button" class="btn-small danger">Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Website giới thiệu sản phẩm</td>
+                                <td>HTML5, CSS3, Grid</td>
+                                <td><span class="status done">Hoàn thành</span></td>
+                                <td>
+                                    <button type="button" class="btn-small">Sửa</button>
+                                    <button type="button" class="btn-small danger">Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Admin Dashboard</td>
+                                <td>HTML5, CSS3</td>
+                                <td><span class="status done">Hoàn thành</span></td>
+                                <td>
+                                    <button type="button" class="btn-small">Sửa</button>
+                                    <button type="button" class="btn-small danger">Xóa</button>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
+            <!-- Personal Info Form -->
             <section class="admin-section" id="personal-info">
-                <div class="toolbar"><div><p>Cập nhật</p><h2>Thông tin cá nhân</h2></div></div>
-                <form class="admin-form">
+                <div class="toolbar">
+                    <div>
+                        <p>Cập nhật</p>
+                        <h2>Thông tin cá nhân</h2>
+                    </div>
+                </div>
+
+                <!-- Form — CSS Grid (form-row 2 cột) -->
+                <div class="admin-form">
                     <div class="form-row">
-                        <div class="form-group"><label for="fullname">Họ và tên</label><input type="text" id="fullname" value="Nguyễn Văn Hào"></div>
-                        <div class="form-group"><label for="email">Email</label><input type="email" id="email" value="email@example.com"></div>
+                        <div class="form-group">
+                            <label for="fullname">Họ và tên</label>
+                            <input type="text" id="fullname" value="Nguyễn Văn Hào">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" value="email@example.com">
+                        </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group"><label for="phone">Số điện thoại</label><input type="tel" id="phone" value="0123 456 789"></div>
-                        <div class="form-group"><label for="address">Địa chỉ</label><input type="text" id="address" value="Đắk Lắk, Việt Nam"></div>
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại</label>
+                            <input type="tel" id="phone" value="0123 456 789">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Địa chỉ</label>
+                            <input type="text" id="address" value="Đắk Lắk, Việt Nam">
+                        </div>
                     </div>
-                    <div class="form-group"><label for="bio">Mô tả bản thân</label><textarea id="bio" rows="5">Sinh viên ngành Hệ thống thông tin quản lý, yêu thích lập trình web và thiết kế giao diện.</textarea></div>
-                    <div class="form-actions"><button type="button" class="btn btn-primary">Lưu thông tin</button><button type="reset" class="btn btn-outline">Khôi phục</button></div>
+                    <div class="form-group">
+                        <label for="bio">Mô tả bản thân</label>
+                        <textarea id="bio" rows="5">Sinh viên ngành Hệ thống thông tin quản lý, yêu thích lập trình web và thiết kế giao diện.</textarea>
+                    </div>
+
+                    <!-- Form Actions — Flexbox (row) -->
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-primary">Lưu thông tin</button>
+                        <button type="button" class="btn btn-outline">Khôi phục</button>
+                    </div>
+
                     <p class="form-note">Giao diện quản trị mô phỏng, không lưu dữ liệu vào máy chủ.</p>
-                </form>
+                </div>
             </section>
+
         </main>
     </div>
+
 </body>
 </html>

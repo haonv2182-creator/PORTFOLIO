@@ -3,30 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập - Portfolio Admin</title>
+    <title>Đăng nhập — Portfolio Admin</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="login-page">
+
     <main class="login-container">
-        <form class="login-form" action="admin.html">
+        <form class="login-form" action="admin.html" method="get">
+
             <div class="login-avatar">PF</div>
             <h1>Đăng nhập</h1>
             <p>Truy cập khu vực quản trị Portfolio cá nhân</p>
 
             <div class="form-group">
                 <label for="username">Tên đăng nhập</label>
-                <input type="text" id="username" name="username" placeholder="Nhập tên đăng nhập" required>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Nhập tên đăng nhập"
+                    autocomplete="username"
+                    required
+                >
             </div>
 
             <div class="form-group">
                 <label for="password">Mật khẩu</label>
-                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Nhập mật khẩu"
+                    autocomplete="current-password"
+                    required
+                >
             </div>
 
-            <button type="submit" class="btn btn-primary full-width">Đăng nhập</button>
+            <button type="submit" class="btn btn-primary full-width">
+                Đăng nhập
+            </button>
+
             <p class="form-note">Giao diện đăng nhập mô phỏng bằng HTML5 và CSS3.</p>
+
             <a href="index.html" class="back-home">← Quay lại trang chính</a>
         </form>
     </main>
+
 </body>
 </html>
