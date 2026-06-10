@@ -100,7 +100,9 @@ button {
 }
 
 .section-soft {
-    background: var(--background-soft);
+    background: linear-gradient(160deg, #fffbef 0%, #fdf6e3 100%);
+    border-top: 1px solid #edddb8;
+    border-bottom: 1px solid #edddb8;
 }
 
 .eyebrow {
@@ -294,6 +296,11 @@ button {
     grid-template-columns: 1.05fr 0.95fr;
     align-items: center;
     gap: 70px;
+
+    background:
+        radial-gradient(ellipse 55% 60% at 78% 40%, rgba(244, 201, 93, 0.13) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 50% at 10% 80%, rgba(244, 201, 93, 0.06) 0%, transparent 65%),
+        var(--background);
 }
 
 .hero-welcome {
@@ -812,7 +819,7 @@ button {
 
 .contact-section {
     color: white;
-    background: var(--primary);
+    background: linear-gradient(135deg, #141414 0%, #1e1a0f 60%, #171717 100%);
 }
 
 .contact-heading h2 {
@@ -883,19 +890,60 @@ button {
 
 .footer {
     border-top: 1px solid var(--border);
+    background: var(--background-soft);
 }
 
-.footer-content {
-    min-height: 90px;
+.footer-inner {
+    padding: 48px 0 28px;
+}
 
+.footer-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 24px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
 }
 
-.footer-content p,
-.footer-content > a:last-child {
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.footer-nav a {
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.footer-nav a:hover {
+    color: var(--text);
+}
+
+.footer-top-link {
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 600;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.footer-top-link:hover {
+    color: var(--text);
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.footer-bottom p {
     color: var(--text-muted);
     font-size: 13px;
 }
@@ -1494,12 +1542,18 @@ td {
         max-width: 100%;
     }
 
-    .footer-content {
-        padding: 23px 0;
-
+    .footer-top {
         flex-direction: column;
-
         text-align: center;
+        gap: 20px;
+    }
+
+    .footer-nav { gap: 16px; }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 6px;
     }
 
     .login-layout {
