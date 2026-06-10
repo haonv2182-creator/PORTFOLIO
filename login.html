@@ -1,101 +1,76 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Đăng nhập - Portfolio Admin</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body class="login-page">
-
-    <main class="login-layout">
-
-        <section class="login-intro">
-
-            <a href="index.html" class="brand">
-                NVH<span>.</span>
-            </a>
-
-            <div>
-                <span class="eyebrow light">Portfolio Admin</span>
-
-                <h1>Quản lý nội dung Portfolio cá nhân.</h1>
-
-                <p>
-                    Trang đăng nhập mô phỏng được xây dựng
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Đăng nhập - Portfolio Admin
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body class="login-page">
+  <main class="login-layout">
+   <section class="login-intro">
+    <a class="brand" href="index.html">
+     NVH
+     <span>
+      .
+     </span>
+    </a>
+    <div>
+     <span class="eyebrow light">
+      Portfolio Admin
+     </span>
+     <h1>
+      Quản lý nội dung Portfolio cá nhân.
+     </h1>
+     <p>
+      Trang đăng nhập mô phỏng được xây dựng
                     bằng HTML5 và CSS3 thuần.
-                </p>
-            </div>
-
-            <a href="index.html" class="back-link">
-                ← Quay lại trang chính
-            </a>
-
-        </section>
-
-        <section class="login-panel">
-
-            <form
-                class="login-form"
-                action="admin.html"
-                method="get"
-            >
-
-                <div class="login-title">
-                    <span>🔐</span>
-
-                    <div>
-                        <small>Khu vực quản trị</small>
-                        <h2>Đăng nhập</h2>
-                    </div>
-                </div>
-
-                <p>
-                    Nhập thông tin để truy cập Admin Dashboard.
-                </p>
-
-                <div class="form-group">
-                    <label for="username">Tên đăng nhập</label>
-
-                    <input
-                        type="text"
-                        id="username"
-                        name="username"
-                        placeholder="Nhập tên đăng nhập"
-                        required
-                    >
-                </div>
-
-                <div class="form-group">
-                    <label for="password">Mật khẩu</label>
-
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="Nhập mật khẩu"
-                        required
-                    >
-                </div>
-
-                <button
-                    type="submit"
-                    class="btn btn-accent full-width"
-                >
-                    Đăng nhập
-                </button>
-
-                <p class="form-note">
-                    Giao diện mô phỏng, không kiểm tra tài khoản thật.
-                </p>
-
-            </form>
-
-        </section>
-
-    </main>
-
-</body>
+     </p>
+    </div>
+    <a class="back-link" href="index.html">
+     ← Quay lại trang chính
+    </a>
+   </section>
+   <section class="login-panel">
+    <form action="admin.html" class="login-form" method="get">
+     <div class="login-title">
+      <span>
+       🔐
+      </span>
+      <div>
+       <small>
+        Khu vực quản trị
+       </small>
+       <h2>
+        Đăng nhập
+       </h2>
+      </div>
+     </div>
+     <p>
+      Nhập thông tin để truy cập Admin Dashboard.
+     </p>
+     <div class="form-group">
+      <label for="username">
+       Tên đăng nhập
+      </label>
+      <input id="username" name="username" placeholder="Nhập tên đăng nhập" required="" type="text"/>
+     </div>
+     <div class="form-group">
+      <label for="password">
+       Mật khẩu
+      </label>
+      <input id="password" name="password" placeholder="Nhập mật khẩu" required="" type="password"/>
+     </div>
+     <button class="btn btn-accent full-width" type="submit">
+      Đăng nhập
+     </button>
+     <p class="form-note">
+      Giao diện mô phỏng, không kiểm tra tài khoản thật.
+     </p>
+    </form>
+   </section>
+  </main>
+ </body>
 </html>

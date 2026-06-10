@@ -26,19 +26,60 @@
 
         <nav class="navbar" aria-label="Điều hướng chính">
 
-            <a href="#home" class="brand">
+            <a class="brand" href="#home">
                 NVH<span>.</span>
             </a>
 
+            <!-- Checkbox điều khiển menu mobile -->
+            <input
+                type="checkbox"
+                id="menu-toggle"
+                class="menu-toggle"
+            >
+
+            <!-- Nút ba gạch -->
+            <label
+                for="menu-toggle"
+                class="menu-button"
+                aria-label="Mở menu điều hướng"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
             <ul class="nav-links">
-                <li><a href="#home">Trang chủ</a></li>
-                <li><a href="#about">Giới thiệu</a></li>
-                <li><a href="#skills">Kỹ năng</a></li>
-                <li><a href="#projects">Dự án</a></li>
-                <li><a href="#contact">Liên hệ</a></li>
+
+                <li>
+                    <a href="#home">Trang chủ</a>
+                </li>
+
+                <li>
+                    <a href="#about">Giới thiệu</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Kỹ năng</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Dự án</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Liên hệ</a>
+                </li>
+
+                <li class="mobile-login-item">
+                    <a href="login.html">Đăng nhập</a>
+                </li>
+
             </ul>
 
-            <a href="login.html" class="btn btn-dark">
+            <a
+                class="btn btn-dark desktop-login"
+                href="login.html"
+            >
                 Đăng nhập
             </a>
 
@@ -50,7 +91,7 @@
 
         <!-- ================= HOME ================= -->
 
-        <section id="home" class="hero container">
+        <section class="hero container" id="home">
 
             <div class="hero-content">
 
@@ -62,7 +103,9 @@
                     Xin chào, tôi là
                 </p>
 
-                <h1>Nguyễn Văn Hào</h1>
+                <h1>
+                    Nguyễn Văn Hào
+                </h1>
 
                 <h2>
                     Sinh viên năm 2 ngành Hệ thống thông tin quản lý
@@ -81,11 +124,17 @@
 
                 <div class="hero-actions">
 
-                    <a href="#about" class="btn btn-accent">
+                    <a
+                        class="btn btn-accent"
+                        href="#about"
+                    >
                         Khám phá hành trình
                     </a>
 
-                    <a href="#projects" class="btn btn-outline">
+                    <a
+                        class="btn btn-outline"
+                        href="#projects"
+                    >
                         Xem dự án
                     </a>
 
@@ -114,7 +163,7 @@
 
         <!-- ================= ABOUT ================= -->
 
-        <section id="about" class="section">
+        <section class="section" id="about">
 
             <div class="container">
 
@@ -124,7 +173,9 @@
                         Về tôi
                     </span>
 
-                    <h2>Giới thiệu bản thân</h2>
+                    <h2>
+                        Giới thiệu bản thân
+                    </h2>
 
                     <p>
                         Thông tin về quá trình học tập
@@ -141,7 +192,8 @@
                     </h3>
 
                     <p>
-                        Xin chào, tôi là <strong>Nguyễn Văn Hào</strong>,
+                        Xin chào, tôi là
+                        <strong>Nguyễn Văn Hào</strong>,
                         hiện đang là sinh viên năm thứ 2 ngành
                         Hệ thống thông tin quản lý tại Trường Đại học
                         Giao thông Vận tải TP.HCM (UTH).
@@ -207,7 +259,10 @@
 
         <!-- ================= SKILLS ================= -->
 
-        <section id="skills" class="section section-soft">
+        <section
+            class="section section-soft"
+            id="skills"
+        >
 
             <div class="container">
 
@@ -217,7 +272,9 @@
                         Năng lực
                     </span>
 
-                    <h2>Kỹ năng của tôi</h2>
+                    <h2>
+                        Kỹ năng của tôi
+                    </h2>
 
                     <p>
                         Những công nghệ, công cụ và kỹ năng
@@ -235,7 +292,9 @@
                         </span>
 
                         <div>
-                            <small>Đã học và thực hành</small>
+                            <small>
+                                Đã học và thực hành
+                            </small>
 
                             <h3>
                                 Ngôn ngữ và cơ sở dữ liệu
@@ -247,10 +306,7 @@
                     <div class="skill-tags">
                         <span>Python cơ bản</span>
                         <span>C++ cơ bản</span>
-                        <span>JavaScript cơ bản</span>
                         <span>MySQL</span>
-                        <span>HTML5</span>
-                        <span>CSS3</span>
                     </div>
 
                 </div>
@@ -264,7 +320,9 @@
                         </span>
 
                         <div>
-                            <small>Công cụ hỗ trợ</small>
+                            <small>
+                                Công cụ hỗ trợ
+                            </small>
 
                             <h3>
                                 Thiết kế và quản lý mã nguồn
@@ -291,9 +349,13 @@
                         </span>
 
                         <div>
-                            <small>Năng lực cá nhân</small>
+                            <small>
+                                Năng lực cá nhân
+                            </small>
 
-                            <h3>Kỹ năng mềm</h3>
+                            <h3>
+                                Kỹ năng mềm
+                            </h3>
                         </div>
 
                     </div>
@@ -313,7 +375,7 @@
 
         <!-- ================= PROJECTS ================= -->
 
-        <section id="projects" class="section">
+        <section class="section" id="projects">
 
             <div class="container">
 
@@ -325,7 +387,9 @@
                             Sản phẩm
                         </span>
 
-                        <h2>Dự án nổi bật</h2>
+                        <h2>
+                            Dự án nổi bật
+                        </h2>
 
                     </div>
 
@@ -394,10 +458,10 @@
                             </div>
 
                             <a
+                                class="project-link"
                                 href="https://github.com/haonv2182-creator/PORTFOLIO"
                                 target="_blank"
                                 rel="noopener"
-                                class="project-link"
                             >
                                 Xem trên GitHub →
                             </a>
@@ -464,10 +528,10 @@
                             </div>
 
                             <a
+                                class="project-link"
                                 href="https://github.com/haonv2182-creator/TraCuuDiemChuannew"
                                 target="_blank"
                                 rel="noopener"
-                                class="project-link"
                             >
                                 Xem trên GitHub →
                             </a>
@@ -476,28 +540,29 @@
 
                     </article>
 
-                    <!-- PROJECT 3 -->
+                    <!-- PROJECT 5 -->
 
                     <article class="project-card">
 
-                        <div class="project-preview preview-three">
+                        <div class="project-preview preview-five">
 
                             <span class="project-preview-icon">
-                                🏠
+                                📊
                             </span>
 
                             <div class="project-preview-content">
 
                                 <small>
-                                    Website quản lý
+                                    Ứng dụng trực quan hóa
                                 </small>
 
                                 <strong>
-                                    Nhà Sinh Viên
+                                    Graph Visualizer
                                 </strong>
 
                                 <p>
-                                    Quản lý lịch trực, hoạt động và sự kiện
+                                    Minh họa cấu trúc đồ thị
+                                    và quá trình xử lý trực quan
                                 </p>
 
                             </div>
@@ -507,36 +572,36 @@
                         <div class="project-body">
 
                             <small>
-                                03 · Website quản lý
+                                05 · Dự án trực quan hóa đồ thị
                             </small>
 
                             <h3>
-                                Website quản lý Nhà Sinh Viên
+                                Graph Visualizer
                             </h3>
 
                             <p>
-                                Website quản lý lịch trực, hoạt động
-                                và sự kiện của khu Nhà Sinh Viên.
+                                Ứng dụng hỗ trợ biểu diễn các đỉnh, cạnh
+                                và quan sát cấu trúc đồ thị theo cách trực quan.
                             </p>
 
                             <p>
                                 <strong>Vai trò:</strong>
-                                Xây dựng giao diện và thao tác thêm,
-                                sửa, xóa dữ liệu trên trình duyệt.
+                                Tham gia xây dựng giao diện, xử lý dữ liệu
+                                và trình bày kết quả trực quan.
                             </p>
 
                             <div class="project-tags">
-                                <span>HTML5</span>
-                                <span>CSS3</span>
-                                <span>JavaScript</span>
-                                <span>Local Storage</span>
+                                <span>Graph</span>
+                                <span>Data Structure</span>
+                                <span>Visualization</span>
+                                <span>Algorithm</span>
                             </div>
 
                             <a
-                                href="https://github.com/haonv2182-creator/Mobile"
+                                class="project-link"
+                                href="https://github.com/Trungkin180906/GRAPH_VISUALIZER"
                                 target="_blank"
                                 rel="noopener"
-                                class="project-link"
                             >
                                 Xem trên GitHub →
                             </a>
@@ -602,10 +667,10 @@
                             </div>
 
                             <a
+                                class="project-link"
                                 href="https://github.com/haonv2182-creator/HeDieuHanh"
                                 target="_blank"
                                 rel="noopener"
-                                class="project-link"
                             >
                                 Xem trên GitHub →
                             </a>
@@ -622,7 +687,10 @@
 
         <!-- ================= CONTACT ================= -->
 
-        <section id="contact" class="section contact-section">
+        <section
+            class="section contact-section"
+            id="contact"
+        >
 
             <div class="container">
 
@@ -632,7 +700,9 @@
                         Kết nối
                     </span>
 
-                    <h2>Liên hệ với tôi</h2>
+                    <h2>
+                        Liên hệ với tôi
+                    </h2>
 
                     <p>
                         Tôi luôn sẵn sàng trao đổi và học hỏi
@@ -644,15 +714,15 @@
                 <div class="contact-grid">
 
                     <a
-                        href="mailto:Haon200611@gmail.com"
                         class="contact-card"
+                        href="mailto:Haon200611@gmail.com"
                     >
 
                         <span>📧</span>
 
                         <div>
                             <small>Email</small>
-                            <strong>Đang cập nhật</strong>
+                            <strong>Haon200611@gmail.com</strong>
                         </div>
 
                     </a>
@@ -663,16 +733,16 @@
 
                         <div>
                             <small>Điện thoại</small>
-                            <strong>Chưa cập nhật</strong>
+                            <strong>0965019xxx</strong>
                         </div>
 
                     </div>
 
                     <a
+                        class="contact-card"
                         href="https://github.com/haonv2182-creator"
                         target="_blank"
                         rel="noopener"
-                        class="contact-card"
                     >
 
                         <span>💻</span>
@@ -700,26 +770,17 @@
 
             <div class="footer-top">
 
-                <a href="#home" class="brand">
+                <a class="brand" href="#home">
                     NVH<span>.</span>
                 </a>
 
-                <nav class="footer-nav" aria-label="Footer navigation">
-                    <a href="#about">Giới thiệu</a>
-                    <a href="#skills">Kỹ năng</a>
-                    <a href="#projects">Dự án</a>
-                    <a href="#contact">Liên hệ</a>
-                </nav>
-
-                <a href="#home" class="footer-top-link">
+                <a
+                    class="footer-top-link"
+                    href="#home"
+                >
                     Lên đầu trang ↑
                 </a>
 
-            </div>
-
-            <div class="footer-bottom">
-                <p>© 2026 Nguyễn Văn Hào — Portfolio thuần HTML5 &amp; CSS3.</p>
-                <p>Đại học Giao thông Vận tải TP.HCM · Hệ thống thông tin quản lý</p>
             </div>
 
         </div>
