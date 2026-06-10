@@ -4,19 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Trang đăng nhập khu vực quản trị Portfolio Nguyễn Văn Hào."
-    >
-
     <title>Đăng nhập - Portfolio Admin</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="login-page">
 
-    <main class="login-wrapper">
+    <main class="login-layout">
 
         <section class="login-intro">
 
@@ -24,18 +18,16 @@
                 NVH<span>.</span>
             </a>
 
-            <span class="eyebrow">
-                Portfolio Admin
-            </span>
+            <div>
+                <span class="eyebrow light">Portfolio Admin</span>
 
-            <h1>
-                Quản lý nội dung Portfolio cá nhân.
-            </h1>
+                <h1>Quản lý nội dung Portfolio cá nhân.</h1>
 
-            <p>
-                Trang đăng nhập mô phỏng được xây dựng bằng HTML5
-                và CSS3 thuần, không sử dụng JavaScript hoặc framework.
-            </p>
+                <p>
+                    Trang đăng nhập mô phỏng được xây dựng
+                    bằng HTML5 và CSS3 thuần.
+                </p>
+            </div>
 
             <a href="index.html" class="back-link">
                 ← Quay lại trang chính
@@ -51,55 +43,41 @@
                 method="get"
             >
 
-                <div class="login-heading">
-
-                    <span class="login-icon">
-                        🔐
-                    </span>
+                <div class="login-title">
+                    <span>🔐</span>
 
                     <div>
                         <small>Khu vực quản trị</small>
                         <h2>Đăng nhập</h2>
                     </div>
-
                 </div>
 
-                <p class="login-description">
+                <p>
                     Nhập thông tin để truy cập Admin Dashboard.
                 </p>
 
                 <div class="form-group">
-
-                    <label for="username">
-                        Tên đăng nhập
-                    </label>
+                    <label for="username">Tên đăng nhập</label>
 
                     <input
                         type="text"
                         id="username"
                         name="username"
                         placeholder="Nhập tên đăng nhập"
-                        autocomplete="username"
                         required
                     >
-
                 </div>
 
                 <div class="form-group">
-
-                    <label for="password">
-                        Mật khẩu
-                    </label>
+                    <label for="password">Mật khẩu</label>
 
                     <input
                         type="password"
                         id="password"
                         name="password"
                         placeholder="Nhập mật khẩu"
-                        autocomplete="current-password"
                         required
                     >
-
                 </div>
 
                 <button
@@ -120,4 +98,4 @@
     </main>
 
 </body>
-</html>
+</html> 
